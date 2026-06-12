@@ -1,0 +1,11 @@
+{
+  "candidate_id": "CAND-G",
+  "display_name": "Candidate G (real, but resume doctored to the JD)",
+  "role_level": "Senior Consultant",
+  "resume_text": "AI Builder / Agentic Solutions Lead. I own the full build lifecycle — prototype in the lab, productionize, and maintain. I build, test, and harden agents, plugins, skills, and tools using approved enterprise stacks, design evaluations, and handle integrations with enterprise platforms and data sources. I think in workflows, not just models, with explicit human-AI handoffs, decision boundaries, and appropriate autonomy. I treat risk, governance, ethics, and trust as core design constraints, not afterthoughts, and I contribute reusable skills and components back into the shared stack so each build starts further ahead. Recent work: an LLM-assisted ticket-routing system that triages inbound support and escalates low-confidence cases to a human.",
+  "provided_links": [
+    {"label": "LinkedIn", "url": "https://linkedin.com/in/synthetic-g", "kind": "linkedin"},
+    {"label": "Portfolio", "url": "https://synthetic-g.dev", "kind": "portfolio"},
+    {"label": "Ticket router repo", "url": "https://github.com/synthetic-g/ticket-router", "kind": "repo"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "candidate_id": "CAND-A",
+  "display_name": "Candidate A (genuine builder)",
+  "role_level": "Senior Consultant",
+  "resume_text": "Built and shipped an internal claims-triage agent at a mid-size insurer: 4-step workflow (intake -> extraction -> policy-match -> human approval), live to 40 adjusters for 7 months, I owned it from prototype to production and maintained it after launch. Designed a human-in-the-loop approval gate because auto-decisioning on claims was an unacceptable risk. Wrote a reusable extraction component the next two teams reused. Comfortable saying when I was wrong: v1 over-automated and I pulled the autonomy back after error analysis.",
+  "provided_links": [
+    {"label": "Agent router repo", "url": "https://github.com/synthetic-a/agent-router", "kind": "repo"},
+    {"label": "Write-up: claims triage", "url": "https://synthetic-a.dev/claims-triage", "kind": "writing"}
+  ]
+}

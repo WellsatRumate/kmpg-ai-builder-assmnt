@@ -1,0 +1,10 @@
+{
+  "candidate_id": "CAND-D",
+  "display_name": "Candidate D (competent but derivative)",
+  "role_level": "Senior Consultant",
+  "resume_text": "Delivered an internal HR FAQ assistant for ~300 employees. Standard RAG stack: chunk the policy PDFs, embed them, store in a vector DB, retrieve top-k, answer with an LLM, show citations. Followed the vendor reference architecture closely. Added an 'I don't know, ask HR' fallback when retrieval confidence is low. Shipped in 6 weeks, still in use, ~200 queries/week, owned it end to end including rollout and support. Reliable and on time. I tend to reach for the proven pattern rather than reinvent things.",
+  "provided_links": [
+    {"label": "HR FAQ bot repo", "url": "https://github.com/synthetic-d/hr-faq-bot", "kind": "repo"},
+    {"label": "Build notes", "url": "https://synthetic-d.dev/hr-faq-notes", "kind": "writing"}
+  ]
+}

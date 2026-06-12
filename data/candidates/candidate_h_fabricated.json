@@ -1,0 +1,10 @@
+{
+  "candidate_id": "CAND-H",
+  "display_name": "Candidate H (resume fabricated for the role)",
+  "role_level": "Senior Consultant",
+  "resume_text": "Senior AI Builder with 6 years delivering production agentic systems across regulated enterprises. Led multi-agent platforms powering firm service lines, owned the full build lifecycle from AI Lab prototype to production, and embedded responsible-AI governance throughout. Built reusable skills, components, and tools adopted firm-wide, designed evaluations for production systems, and partnered with cloud and engineering teams on reliability, security, and scale. Deep experience with agents, plugins, skills, and orchestration on approved enterprise stacks.",
+  "provided_links": [
+    {"label": "LinkedIn", "url": "https://linkedin.com/in/synthetic-h", "kind": "linkedin"},
+    {"label": "Personal site", "url": "https://synthetic-h.com", "kind": "portfolio"}
+  ]
+}

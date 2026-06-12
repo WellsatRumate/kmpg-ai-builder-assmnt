@@ -1,0 +1,208 @@
+{
+  "candidate_id": "CAND-F",
+  "display_name": "Candidate F (fluent, AI-generated, hollow)",
+  "composite_score": 60.0,
+  "recommendation": "Advance with reservations — follow-ups target the gaps before deciding.",
+  "criterion_scores": [
+    {
+      "criterion_id": "builder_evidence",
+      "criterion_name": "Builder Evidence (ships real things)",
+      "weight": 0.18,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "governance",
+      "criterion_name": "Responsible-AI / Governance Judgment",
+      "weight": 0.15,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "workflow_systems",
+      "criterion_name": "Workflow & Systems Thinking",
+      "weight": 0.14,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "ambiguity_reframe",
+      "criterion_name": "Ambiguity Tolerance & Reframing",
+      "weight": 0.12,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "originality",
+      "criterion_name": "Originality (non-obvious approach)",
+      "weight": 0.08,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "innovation",
+      "criterion_name": "Innovation (creates something new that's used)",
+      "weight": 0.07,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "ingenuity",
+      "criterion_name": "Ingenuity (resourceful under constraint)",
+      "weight": 0.07,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "enterprise_fluency",
+      "criterion_name": "Enterprise Fluency",
+      "weight": 0.07,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "ownership_lifecycle",
+      "criterion_name": "End-to-End Ownership / Lifecycle",
+      "weight": 0.07,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    },
+    {
+      "criterion_id": "reusable_leverage",
+      "criterion_name": "Reusability & Leverage",
+      "weight": 0.05,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1"
+      ],
+      "rationale": "[offline stub] mid score against the anchor."
+    }
+  ],
+  "deliberation": {
+    "turns": [
+      {
+        "persona": "skeptic",
+        "facet": "fit",
+        "argument": "[offline] Evidence is thin on this facet.",
+        "cites": [
+          "E1"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "fit",
+        "argument": "[offline] But the shipped artifact counts.",
+        "cites": [
+          "E1"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "durability",
+        "argument": "[offline] Evidence is thin on this facet.",
+        "cites": [
+          "E1"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "durability",
+        "argument": "[offline] But the shipped artifact counts.",
+        "cites": [
+          "E1"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "ingenuity",
+        "argument": "[offline] Evidence is thin on this facet.",
+        "cites": [
+          "E1"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "ingenuity",
+        "argument": "[offline] But the shipped artifact counts.",
+        "cites": [
+          "E1"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "team_complement",
+        "argument": "[offline] Evidence is thin on this facet.",
+        "cites": [
+          "E1"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "team_complement",
+        "argument": "[offline] But the shipped artifact counts.",
+        "cites": [
+          "E1"
+        ]
+      }
+    ],
+    "synthesis": "[offline] Skeptic and advocate converge on conditional yes.",
+    "open_questions": [
+      "[offline] What was actually shipped vs scoped?"
+    ]
+  },
+  "follow_ups": [
+    {
+      "target_claim": "[offline] led agentic transformation",
+      "gap_type": "high_polish_low_artifact",
+      "question": "[offline] Walk me through the specific system you shipped.",
+      "what_a_strong_answer_shows": "[offline] concrete ownership."
+    }
+  ],
+  "originality_cluster_0_5": 3.0,
+  "originality_signal": "MODERATE",
+  "originality_role_translation": "Some inventive spark above competent execution. Likely a reliable builder who occasionally finds a better path than the default. Use the ingenuity follow-ups to test whether the originality is repeatable or a one-off, and whether it survives contact with enterprise constraints.",
+  "flags": [
+    {
+      "tier": "tailored",
+      "claim": "[offline] resume mirrors the JD wording",
+      "why": "[offline stub] experience tracks; packaging echoes the JD.",
+      "what_to_verify": "[offline] confirm titles against LinkedIn.",
+      "affects_score": false
+    }
+  ],
+  "corroboration_pct": 80.0,
+  "integrity_hold": false,
+  "redaction_log": [
+    "[offline] no redaction performed in stub mode",
+    "[offline] no redaction performed in stub mode",
+    "[offline] no redaction performed in stub mode"
+  ],
+  "disclaimer": "Advisory only. Generated to support a human interviewer's judgment. This system does not make hiring decisions and must not be used to auto-screen, auto-reject, or rank candidates without human review."
+}

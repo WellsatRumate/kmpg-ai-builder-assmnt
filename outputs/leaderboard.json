@@ -1,0 +1,226 @@
+{
+  "generated_at": "2026-06-11T07:00:00Z",
+  "rubric_version": "1.0",
+  "criteria": [
+    {"id": "builder_evidence", "name": "Builder Evidence", "weight": 0.18},
+    {"id": "governance", "name": "Responsible-AI / Governance", "weight": 0.15},
+    {"id": "workflow_systems", "name": "Workflow & Systems Thinking", "weight": 0.14},
+    {"id": "ambiguity_reframe", "name": "Ambiguity Tolerance & Reframing", "weight": 0.12},
+    {"id": "originality", "name": "Originality", "weight": 0.08},
+    {"id": "innovation", "name": "Innovation", "weight": 0.07},
+    {"id": "ingenuity", "name": "Ingenuity", "weight": 0.07},
+    {"id": "enterprise_fluency", "name": "Enterprise Fluency", "weight": 0.07},
+    {"id": "ownership_lifecycle", "name": "End-to-End Ownership", "weight": 0.07},
+    {"id": "reusable_leverage", "name": "Reusability & Leverage", "weight": 0.05}
+  ],
+  "candidates": [
+    {
+      "candidate_id": "CAND-I",
+      "display_name": "Wells Mensah (BYAMN)",
+      "composite_score": 94,
+      "recommendation": "Advance — strong signal. Use follow-ups to confirm depth.",
+      "scores": {
+        "builder_evidence": 5,
+        "governance": 5,
+        "workflow_systems": 5,
+        "ambiguity_reframe": 5,
+        "originality": 5,
+        "innovation": 5,
+        "ingenuity": 5,
+        "enterprise_fluency": 3,
+        "ownership_lifecycle": 5,
+        "reusable_leverage": 4
+      },
+      "top_followups": [
+        "Your enterprise experience is solo-founder context. Walk me through a time you shipped inside someone else's constraints — their stack, their compliance, their timeline.",
+        "BYAMN performs aggressive recon on real people. Where do you draw the line on what an agent should discover vs what requires consent, and how did you enforce that line technically?",
+        "Rumate's dual-LLM deliberation uses Claude + Qwen. What happens when they disagree on a classification and neither is clearly wrong? Walk me through a real case."
+      ]
+    },
+    {
+      "candidate_id": "CAND-E",
+      "display_name": "Candidate E (genuine inventor)",
+      "composite_score": 84,
+      "recommendation": "Advance — strong signal. Use follow-ups to confirm depth.",
+      "scores": {
+        "builder_evidence": 5,
+        "governance": 3,
+        "workflow_systems": 4,
+        "ambiguity_reframe": 4,
+        "originality": 5,
+        "innovation": 5,
+        "ingenuity": 5,
+        "enterprise_fluency": 3,
+        "ownership_lifecycle": 4,
+        "reusable_leverage": 4
+      },
+      "top_followups": [
+        "You named the failure mode — both weak models wrong the same way. How often did that actually happen in production, and how did you detect it after the fact?",
+        "The self-calibrating threshold needs zero labelled data. What assumption does that rest on, and when does it break?",
+        "You mention governance as a design constraint is important to you. Give me a specific example where you constrained or removed a capability for a governance reason."
+      ]
+    },
+    {
+      "candidate_id": "CAND-A",
+      "display_name": "Candidate A (genuine builder)",
+      "composite_score": 78,
+      "recommendation": "Advance — strong signal. Use follow-ups to confirm depth.",
+      "scores": {
+        "builder_evidence": 5,
+        "governance": 4,
+        "workflow_systems": 5,
+        "ambiguity_reframe": 3,
+        "originality": 2,
+        "innovation": 2,
+        "ingenuity": 3,
+        "enterprise_fluency": 4,
+        "ownership_lifecycle": 5,
+        "reusable_leverage": 4
+      },
+      "top_followups": [
+        "The extraction component got reused by two other teams. What did you do to make it reusable vs just handing them your code?",
+        "V1 over-automated and you pulled autonomy back. How did you decide WHERE to set the new boundary, and how did you get the adjusters to trust v2 after v1 failed?",
+        "Your approach is solid and well-executed. Where have you built something where the solution wasn't the obvious one — where you surprised yourself?"
+      ]
+    },
+    {
+      "candidate_id": "CAND-C",
+      "display_name": "Candidate C (self-taught, messy resume)",
+      "composite_score": 73,
+      "recommendation": "Advance — strong signal. Use follow-ups to confirm depth.",
+      "scores": {
+        "builder_evidence": 5,
+        "governance": 3,
+        "workflow_systems": 3,
+        "ambiguity_reframe": 4,
+        "originality": 3,
+        "innovation": 3,
+        "ingenuity": 4,
+        "enterprise_fluency": 2,
+        "ownership_lifecycle": 5,
+        "reusable_leverage": 4
+      },
+      "top_followups": [
+        "The rota engine has been running 14 months. What broke in production that you didn't anticipate, and how did you fix it without a team?",
+        "You'd be working inside a large regulated enterprise, not a depot. What's your mental model for how decisions get made when there are 6 stakeholders and no one person says yes?",
+        "Two other depots picked up the constraint library. Did you design it to be reusable from the start, or did you extract it after the fact? Walk me through the extraction."
+      ]
+    },
+    {
+      "candidate_id": "CAND-D",
+      "display_name": "Candidate D (competent but derivative)",
+      "composite_score": 50,
+      "recommendation": "Advance with reservations — follow-ups target the gaps before deciding.",
+      "scores": {
+        "builder_evidence": 4,
+        "governance": 2,
+        "workflow_systems": 3,
+        "ambiguity_reframe": 2,
+        "originality": 1,
+        "innovation": 1,
+        "ingenuity": 1,
+        "enterprise_fluency": 3,
+        "ownership_lifecycle": 4,
+        "reusable_leverage": 2
+      },
+      "top_followups": [
+        "You followed the vendor reference architecture closely. At what point during the build did you consider a different approach, and why did you stay with the standard one?",
+        "The 'I don't know, ask HR' fallback is a good call. How did you decide the confidence threshold, and did you measure what happened to the queries that hit it?",
+        "You say you reach for the proven pattern. Give me a case where the proven pattern didn't fit and you had to invent something — or a case where you wish you had."
+      ]
+    },
+    {
+      "candidate_id": "CAND-G",
+      "display_name": "Candidate G (real, resume tailored to JD)",
+      "composite_score": 38,
+      "recommendation": "Borderline — evidence is thin; follow-ups are decisive here.",
+      "scores": {
+        "builder_evidence": 3,
+        "governance": 2,
+        "workflow_systems": 2,
+        "ambiguity_reframe": 1,
+        "originality": 1,
+        "innovation": 1,
+        "ingenuity": 1,
+        "enterprise_fluency": 2,
+        "ownership_lifecycle": 3,
+        "reusable_leverage": 2
+      },
+      "top_followups": [
+        "Your resume uses language very close to the JD — 'build, test, and harden agents, plugins, skills, and tools' appears almost verbatim. Walk me through the specific system where you did that, with architecture details.",
+        "You mention treating governance as a core design constraint. Give me the specific constraint, the system it applied to, and what you changed or removed because of it.",
+        "The ticket-routing system is the only concrete project named. What was the hardest technical decision in that build, and what was the alternative you rejected?"
+      ]
+    },
+    {
+      "candidate_id": "CAND-F",
+      "display_name": "Candidate F (fluent, AI-generated, hollow)",
+      "composite_score": 15,
+      "recommendation": "Insufficient evidence to advance on current submission — invite more artifacts.",
+      "scores": {
+        "builder_evidence": 1,
+        "governance": 1,
+        "workflow_systems": 2,
+        "ambiguity_reframe": 0,
+        "originality": 0,
+        "innovation": 0,
+        "ingenuity": 0,
+        "enterprise_fluency": 1,
+        "ownership_lifecycle": 1,
+        "reusable_leverage": 0
+      },
+      "top_followups": [
+        "You describe a supervisor agent orchestrating sub-agents. Draw the architecture on a whiteboard — what calls what, what data flows where, and where does the human intervene?",
+        "You mention evaluation metrics like faithfulness and answer relevance. How did you compute them, on what data, and what threshold did you set for production readiness?",
+        "What went wrong during the build that forced you to change your approach?"
+      ]
+    },
+    {
+      "candidate_id": "CAND-H",
+      "display_name": "Candidate H (resume fabricated for the role)",
+      "composite_score": 8,
+      "recommendation": "Insufficient evidence to advance on current submission — invite more artifacts.",
+      "scores": {
+        "builder_evidence": 0,
+        "governance": 0,
+        "workflow_systems": 0,
+        "ambiguity_reframe": 0,
+        "originality": 0,
+        "innovation": 0,
+        "ingenuity": 0,
+        "enterprise_fluency": 1,
+        "ownership_lifecycle": 0,
+        "reusable_leverage": 0
+      },
+      "top_followups": [
+        "You claim 6 years delivering production agentic systems. Name one. Architecture, users, how long it ran, what broke.",
+        "You say you built reusable skills adopted firm-wide. Show me one — the repo, the interface, who adopted it.",
+        "What is one thing you built that didn't work, and what did you learn from it?"
+      ]
+    },
+    {
+      "candidate_id": "CAND-B",
+      "display_name": "Candidate B (polished, AI-outsourced)",
+      "composite_score": 7,
+      "recommendation": "Insufficient evidence to advance on current submission — invite more artifacts.",
+      "scores": {
+        "builder_evidence": 0,
+        "governance": 1,
+        "workflow_systems": 1,
+        "ambiguity_reframe": 0,
+        "originality": 0,
+        "innovation": 0,
+        "ingenuity": 0,
+        "enterprise_fluency": 1,
+        "ownership_lifecycle": 0,
+        "reusable_leverage": 0
+      },
+      "top_followups": [
+        "You describe spearheading enterprise-wide agentic transformation. Name the system — what agents, what they did, who used them, how long it ran.",
+        "You mention championing responsible AI. Give me one specific design decision where you constrained or removed a capability because of a risk.",
+        "Show me something you built that I can open and inspect."
+      ]
+    }
+  ],
+  "disclaimer": "Advisory only. Generated to support a human interviewer's judgment. This system does not make hiring decisions and must not be used to auto-screen, auto-reject, or rank candidates without human review."
+}

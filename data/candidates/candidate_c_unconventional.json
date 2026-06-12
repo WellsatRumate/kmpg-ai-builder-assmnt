@@ -1,0 +1,10 @@
+{
+  "candidate_id": "CAND-C",
+  "display_name": "Candidate C (self-taught, messy resume)",
+  "role_level": "Senior Consultant",
+  "resume_text": "no formal cs background. was a logistics coordinator. got annoyed at a manual rota process so i built a thing to fix it. it schedules 200+ shift workers, has a fallback when the model is unsure (kicks to a human), been running 14 months at my old depot, they still use it. also made a little library for the rota constraints that two other depots picked up. not great at slide decks. happy to show the code and walk through why i made each call.",
+  "provided_links": [
+    {"label": "Rota scheduler repo", "url": "https://github.com/synthetic-c/rota-engine", "kind": "repo"},
+    {"label": "Demo video", "url": "https://synthetic-c.dev/demo", "kind": "demo"}
+  ]
+}

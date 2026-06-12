@@ -1,0 +1,10 @@
+{
+  "candidate_id": "CAND-B",
+  "display_name": "Candidate B (polished, AI-outsourced)",
+  "role_level": "Senior Consultant",
+  "resume_text": "Visionary AI Builder who spearheaded enterprise-wide agentic transformation, driving paradigm-shifting outcomes and synergizing cross-functional stakeholders to operationalize next-generation autonomous workflows. Led the strategic deployment of mission-critical LLM solutions at scale, championing responsible AI and unlocking unprecedented value. Recognized thought leader in the agentic AI space with a proven track record of delivering transformative impact across the enterprise.",
+  "provided_links": [
+    {"label": "Personal site", "url": "https://synthetic-b.io/about", "kind": "portfolio"},
+    {"label": "Medium article", "url": "https://synthetic-b.io/the-future-of-agents", "kind": "writing"}
+  ]
+}

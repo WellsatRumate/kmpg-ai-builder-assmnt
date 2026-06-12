@@ -1,0 +1,367 @@
+{
+  "candidate_id": "CAND-A",
+  "display_name": "Candidate A (genuine builder)",
+  "composite_score": 86.4,
+  "recommendation": "Advance — strong signal. Use follow-ups to confirm depth.",
+  "criterion_scores": [
+    {
+      "criterion_id": "builder_evidence",
+      "criterion_name": "Builder Evidence (ships real things)",
+      "weight": 0.18,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E6",
+        "E10"
+      ],
+      "rationale": "Shipped claims-triage agent to 40 live users; repo shows ~2k commits, multi-stage agentic architecture, production validation harness."
+    },
+    {
+      "criterion_id": "governance",
+      "criterion_name": "Responsible-AI / Governance Judgment",
+      "weight": 0.15,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E3",
+        "E7",
+        "E12",
+        "E13"
+      ],
+      "rationale": "Explicitly designed human-in-the-loop gate; disabled auto-decisioning above $5k; reduced autonomy post-error; governance as core design constraint, not afterthought."
+    },
+    {
+      "criterion_id": "workflow_systems",
+      "criterion_name": "Workflow & Systems Thinking",
+      "weight": 0.14,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E6",
+        "E11"
+      ],
+      "rationale": "4-step workflow (intake → extraction → policy-match → human approval); documented handoffs; clear human-loop boundaries; multi-stage agentic routing."
+    },
+    {
+      "criterion_id": "ambiguity_reframe",
+      "criterion_name": "Ambiguity Tolerance & Reframing",
+      "weight": 0.12,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E5",
+        "E13",
+        "E15"
+      ],
+      "rationale": "Recognized v1 over-automation; conducted error analysis; redesigned autonomy boundaries; reframed problem from full automation to appropriate scoping."
+    },
+    {
+      "criterion_id": "originality",
+      "criterion_name": "Originality (non-obvious approach)",
+      "weight": 0.08,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1",
+        "E6"
+      ],
+      "rationale": "Multi-stage agentic workflow is sound but architecturally conventional for claims triage. No evidence of divergence from standard reference pattern."
+    },
+    {
+      "criterion_id": "innovation",
+      "criterion_name": "Innovation (creates something new that's used)",
+      "weight": 0.07,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "E14"
+      ],
+      "rationale": "Deployed agentic claims system that generated real use (40 adjusters, 7 months). Useful but applies known patterns; not a novel capability or combination."
+    },
+    {
+      "criterion_id": "ingenuity",
+      "criterion_name": "Ingenuity (resourceful under constraint)",
+      "weight": 0.07,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E8",
+        "E13"
+      ],
+      "rationale": "Built eval harness on 1,200 labelled claims; error-driven redesign. Resourceful but no explicit constraint signal (no mention of scarcity, legacy systems, tight clock)."
+    },
+    {
+      "criterion_id": "enterprise_fluency",
+      "criterion_name": "Enterprise Fluency",
+      "weight": 0.07,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E2",
+        "E3",
+        "E7",
+        "E14"
+      ],
+      "rationale": "Demonstrates regulated domain understanding; stakeholder constraints (adjuster workflow); production deployment (40 users, 7 months sustained); risk-aware governance."
+    },
+    {
+      "criterion_id": "ownership_lifecycle",
+      "criterion_name": "End-to-End Ownership / Lifecycle",
+      "weight": 0.07,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "E9",
+        "E10"
+      ],
+      "rationale": "Owned prototype through production launch; 7 months post-launch maintenance; rollback management; ~2k commits over 9 months; full lifecycle ownership evident."
+    },
+    {
+      "criterion_id": "reusable_leverage",
+      "criterion_name": "Reusability & Leverage",
+      "weight": 0.05,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E4"
+      ],
+      "rationale": "Built reusable extraction component adopted by two teams. Single signal but strong; demonstrates modularity mindset. Limited evidence of broader pattern abstraction."
+    }
+  ],
+  "deliberation": {
+    "turns": [
+      {
+        "persona": "skeptic",
+        "facet": "fit",
+        "argument": "This is hands-on delivery, not pure research—that's clear. But 'regulated enterprise builder' needs more scrutiny. The candidate shipped *one* system in *one* domain (claims) with a narrow governance scope (a $5k threshold gate). We don't see evidence of navigating multi-stakeholder compliance frameworks, audit readiness, regulatory documentation, data lineage for audit, or operating in a truly constrained environment. The human-in-the-loop gate [E3, E7, E12] looks responsible, but it's a relatively simple safety valve, not the complex compliance orchestration a regulated builder faces. Did they work with compliance/legal? Did they design for audit trails? This reads more like 'shipped a thoughtful system in an insurance context' than 'proved fit for regulated enterprise complexity.' A stronger candidate would show comfort with pre-mortems, audit logs, SOX-style controls, cross-functional governance cadence.",
+        "cites": [
+          "E2",
+          "E3",
+          "E7",
+          "E8",
+          "E12",
+          "E13",
+          "E14",
+          "E15"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "fit",
+        "argument": "The evidence directly shows regulated enterprise fit. Insurance is a regulated industry—claims decisions have legal and compliance weight [E3, E7]. The candidate didn't just build an agentic system; they made a *governance decision to disable auto-decisioning* [E3, E7, E12], which is the core discipline of regulated AI. They built human-in-the-loop approval gates [E3, E7], documented rollback decisions [E9, E15], and conducted error analysis before scaling [E13]. They shipped to 40 live adjusters over 7 months [E2, E14]—not a pilot, sustained enterprise use. The eval harness for validation [E8] shows thinking beyond 'does it work' to 'can I prove it works.' This isn't a researcher publishing; it's a builder making trade-offs between capability and safety in a real regulated context, scaling it, and standing by the decisions. That's hands-on regulated builder work.",
+        "cites": [
+          "E2",
+          "E3",
+          "E7",
+          "E8",
+          "E12",
+          "E13",
+          "E14",
+          "E15"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "durability",
+        "argument": "This person delivered one end-to-end system and walked it through post-launch for 7 months [E2]. That's real, but it's not a pattern. One greenfield project that includes maintenance isn't proof of durability across *multiple* full lifecycles or brownfield rescues. The error analysis [E5, E13] and rollback [E9, E15] show learning from failure, but we don't see evidence they stayed engaged when the system became boring—when it was stable and needed incremental improvement, not architectural redesign. Did they hand it off? Keep optimizing? Move to the next greenfield? The 2k commits over 9 months [E10] is sustenance, but we can't tell if they're the kind of builder who thrives in stable-state problems or only in 'new hard thing' mode. A durable candidate would show evidence of *multiple* projects at different maturity stages or explicit willingness to own maintenance.",
+        "cites": [
+          "E2",
+          "E4",
+          "E5",
+          "E9",
+          "E13",
+          "E14",
+          "E15"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "durability",
+        "argument": "The durability signal is in the explicit cycle shown. The candidate built v1, hit problems in production, *did error analysis* [E5, E13], pulled back autonomy [E5, E13], and shipped v2 [E9, E15]. That's not a one-shot delivery—it's iteration and learning in response to real-world failure, which is exactly how durability manifests. They stayed engaged through post-launch maintenance for 7 months on 40 live adjusters [E2, E14], which is unglamorous, real work. The documented rollback [E9, E15] and honest post-mortem [E15] suggest they don't flee when something breaks; they own it and redesign. The reusable extraction component [E4] that two other teams adopted shows they think beyond a single project—they're building infrastructure that outlasts the first implementation. That's durability thinking. They didn't cherry-pick the fun part; they saw the system through multiple phases.",
+        "cites": [
+          "E2",
+          "E4",
+          "E5",
+          "E9",
+          "E13",
+          "E14",
+          "E15"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "ingenuity",
+        "argument": "The core architecture—intake → extraction → policy-match → human-approval—is a standard agentic pipeline [E1, E6]. Multi-stage routers are table stakes in agent design. The human-in-the-loop gate [E3, E7, E12] is responsible risk management, but it's not inventive; it's the obvious move when stakes are high. The eval harness [E8] is good hygiene, not innovation. The error analysis and v1 rollback [E5, E9, E13, E15] show good judgment and humility, but that's also known practice in ML: measure, fail, iterate. There's no evidence of a novel insight—a clever routing heuristic, an original safety pattern, or an unexpected technical solution. This reads as 'competent execution of the agentic pipeline playbook for claims,' not 'someone who sees around corners.' A candidate with genuine spark would show a non-obvious design choice justified by deep insight into the domain or the problem.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E8",
+          "E12",
+          "E13"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "ingenuity",
+        "argument": "Ingenuity is visible in the *design tradeoff*, not in exotic tech. The candidate recognized that full autonomy in claims was unacceptable [E3, E5] and designed a hybrid model: let the agent triage and route, but *require human judgment at the approval gate* [E3, E7, E12]. That's a design insight—not 'humans + AI are better' (generic), but 'in this domain, the cost of false acceptance is so high that we need human review at the decision boundary, not just at edges.' They then measured failure modes [E8, E13] and *reduced agent autonomy further* based on what they learned [E5, E13]—pulling back, not expanding, shows clear-eyed judgment about where the agent is trustworthy. That's inventiveness in risk design, not raw algorithmic novelty. They extracted a reusable component [E4] that scaled to two other teams, which means they recognized a generalizable abstraction early. That's the ingenuity of a builder: not flashy, but it's the difference between a one-off system and an architecture.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E8",
+          "E12",
+          "E13"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "team_complement",
+        "argument": "This candidate is a generalist end-to-end builder—full stack from design to deployment to ops [E1, E2, E6]. That's valuable, but it's also not rare in the AI builder market. If your team already has one or two people who do intake-to-launch, this person is *redundant on the core craft*. The human-in-the-loop discipline [E3, E7, E12] is a plus, but if you have a strong PM or compliance-minded engineer, that's covered. The error analysis [E13] is solid, but it's not a specialized strength—any builder worth their salt should do that. The eval harness [E8] suggests comfort with measurement, but no evidence of deep expertise in evaluation methodology or metrics design that would make them uniquely valuable. What's *missing*: no sign of systems thinking at scale, no evidence of mentoring or raising the bar for others, no indication they own hard tradeoffs at the architecture level beyond this one system. They'd be a capable peer, not a force multiplier.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E9",
+          "E12",
+          "E13",
+          "E15"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "team_complement",
+        "argument": "This candidate brings two distinct strengths a team might lack. First: *governance and safety judgment in regulated contexts*. The explicit decision to disable auto-decisioning [E3, E7, E12], the rollback discipline [E9, E15], the error analysis feeding redesign [E5, E13]—this is not every builder's muscle. If your team skews toward 'move fast, iterate in production,' this person anchors the other end: 'measure, understand failure, pull back if needed.' Second: *component abstraction and reuse*. The extraction component [E4] that two teams adopted shows they think about generalization and infrastructure, not just solving the immediate problem. Many builders are heroic one-system owners; this person is building blocks others can leverage. In a regulated, multi-team environment, that's the difference between scaling chaos and scaling systems. They're also transparent about failure [E15], which sets a cultural signal. They'd complement a team of pure velocity builders or pure researchers by grounding decisions in production reality and measured risk.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E9",
+          "E12",
+          "E13",
+          "E15"
+        ]
+      }
+    ],
+    "synthesis": "Both perspectives agree the candidate delivered a real, sustained system in a regulated domain (insurance claims) with 7 months of post-launch operation across 40 live users. They agree on the core strength: disciplined governance choices (human-in-the-loop approval gate, rollback capability, error analysis feeding redesign) and willingness to *reduce* agent autonomy when failure modes emerged. They also agree this is hands-on delivery, not pure research.\n\nKey divergence:\n\n**Regulated Enterprise Fit**: Skeptic argues the evidence shows 'thoughtful system in insurance' but not 'multi-stakeholder compliance orchestration'—no visible engagement with legal/compliance partners, audit-trail architecture, SOX-style controls, or pre-mortems. Advocate counters that insurance *is* a regulated industry, the human-in-the-loop gate is the core discipline of regulated AI, and sustained 7-month operation with documented rollback proves the candidate makes real trade-offs in constrained environments, not just ships and leaves. The gap: we don't know if the candidate *designed* for compliance/audit or if governance happened to align with good judgment. No evidence of cross-functional governance cadence or regulatory documentation work.\n\n**Durability**: Skeptic sees one greenfield lifecycle; advocate sees iteration and learning (v1 → error analysis → v2). Both are right. Skeptic's real concern is whether the candidate thrives in *stable-state* or only in 'new hard problem' mode—no pattern evidence. Advocate notes the reusable extraction component and the unglamorous 7-month maintenance window. The honest gap: one full cycle doesn't prove durability across *multiple* projects or willingness to own brownfield rescues.\n\n**Ingenuity**: Skeptic calls the agentic pipeline standard; advocate emphasizes the *design tradeoff*—the insight that claims approval requires human judgment at the decision boundary, not just safety rails at edges, and the measured discipline to *reduce* autonomy post-launch. This is a real disagreement: is recognizing 'high-stakes decisions need human control' inventive, or table-stakes risk management? Skeptic finds it known practice; advocate sees domain-aware architectural judgment. No evidence of novel algorithmic insight either way.\n\n**Team Complement**: Skeptic sees a capable generalist peer, potentially redundant if the team already has end-to-end builders. Advocate sees two distinct strengths: (1) governance and safety discipline in regulated contexts, rare among velocity-focused builders, and (2) component abstraction (reusable extraction), infrastructure thinking beyond heroic one-offs. Skeptic notes no evidence of mentoring, systems-scale thinking, or architecture-level tradeoffs beyond this system. Advocate notes the transparency about failure sets cultural signal.\n\n**Where they genuinely converge**: (1) Real delivery in a regulated context with sustained operation. (2) Explicit governance choices and human-in-the-loop discipline. (3) Willingness to learn from failure and redesign. (4) Hands-on builder, not researcher. (5) No flashy algorithmic innovation.\n\n**Where they genuinely diverge**: Whether the governance discipline reflects *deep compliance thinking* (skeptic: unclear) or *genuine regulated builder judgment* (advocate: proven by choices and scaling). Whether one full cycle plus reusable component proves *durable pattern* (skeptic: insufficient) or *evidence of learning and infrastructure thinking* (advocate: sufficient for this hire). Whether design tradeoffs show *domain ingenuity* (advocate) or *table-stakes risk management* (skeptic).",
+    "open_questions": [
+      "Did the candidate work directly with compliance, legal, or audit teams, or did governance discipline emerge from engineering judgment alone? What would their audit-readiness process look like on a second regulated system?",
+      "Has the candidate owned a brownfield system or operated a stable-state mature system through incremental improvement, or does the pattern show greenfield heroics followed by handoff?",
+      "How does the candidate think about systemic risk, regulatory documentation, and pre-mortems when designing systems? Is the human-in-the-loop gate a one-time safety valve, or does it reflect a philosophy of bounded autonomy they'd apply across multiple projects?",
+      "Beyond the reusable extraction component, what evidence exists that this candidate thinks about infrastructure, abstraction, and generalization versus building the best single-problem solution?",
+      "In a team of high-velocity builders or pure researchers, would this candidate's governance discipline feel like anchoring rigor or like friction? What's their track record of influencing team culture around risk and measurement?",
+      "If this system had remained stable and required only incremental optimization (no new architecture), would they have stayed engaged or moved to the next greenfield problem?"
+    ]
+  },
+  "follow_ups": [
+    {
+      "target_claim": "Originality (3.0/5): Multi-stage agentic workflow for claims triage",
+      "gap_type": "high_polish_low_artifact",
+      "question": "Walk me through a specific example of how your multi-stage agentic workflow actually decides which claims should be triaged to which stage or handler. What information does each stage use to make that routing decision, and how did you determine that was the right way to split the work?",
+      "what_a_strong_answer_shows": "Genuine understanding of the actual decision logic and tradeoffs in the workflow design. A strong answer reveals concrete routing criteria, explains why claims were split that way (not just that they were), describes failure modes or edge cases they discovered, and shows evidence of iterating on the design—rather than a polished description of what multi-stage agentic systems do in general."
+    },
+    {
+      "target_claim": "Ingenuity (3.0/5): Built eval harness on 1,200 labelled claims; error-driven redesign",
+      "gap_type": "depth_probe",
+      "question": "Walk me through a specific example of an error your eval harness caught during testing. What was the error, how did you discover it, and what about your harness design changed as a result?",
+      "what_a_strong_answer_shows": "Genuine hands-on involvement with the harness. A strong answer includes: (1) a concrete, detailed error scenario (not vague), (2) the specific mechanism by which the harness surfaced it (e.g., a particular metric, threshold, or test case), (3) the root cause they identified in their design, and (4) the precise redesign choice they made. Weaker answers are generic, lack technical specificity, or describe errors without clear causal links to design changes."
+    },
+    {
+      "target_claim": "Ambiguity Tolerance (4.0/5): Recognized v1 over-automation; redesigned autonomy boundaries",
+      "gap_type": "depth_probe",
+      "question": "Walk me through a specific example where you discovered the automation was doing something you didn't initially expect it to do. What was the situation, what did you observe, and how did you decide what level of human control needed to come back in?",
+      "what_a_strong_answer_shows": "Whether the candidate can articulate a concrete failure mode they *actually encountered* (not theoretical), describe their diagnosis process, and explain their reasoning for where to re-introduce human judgment—revealing whether they wrestled with real trade-offs between efficiency and control, or simply applied a blanket fix."
+    },
+    {
+      "target_claim": "Reusability & Leverage (4.0/5): Extraction component adopted by two teams",
+      "gap_type": "unverified_scope",
+      "question": "Walk me through a specific instance where the second team adopted your extraction component. What did they need to change or configure to make it work in their context, and what challenges came up during that integration?",
+      "what_a_strong_answer_shows": "Genuine understanding of the component's actual reusability constraints, real integration friction points, and whether adoption required meaningful customization or was truly plug-and-play. A candidate who merely claims reusability without deeper knowledge will struggle to articulate concrete technical details, timeline, or specific blockers the second team encountered."
+    },
+    {
+      "target_claim": "End-to-End Ownership (5.0/5): Owned prototype through production; 7 months post-launch maintenance",
+      "gap_type": "unverified_scope",
+      "question": "Walk me through a specific production issue that emerged after launch during those 7 months of maintenance. What was broken, how did you discover it, and what decision did you have to make about whether to fix it or defer it?",
+      "what_a_strong_answer_shows": "Whether the candidate was actually embedded in post-launch operations and had to make real trade-off decisions about bug fixes, performance issues, or technical debt. A strong answer includes specifics: the nature of the problem, who reported it or how it was caught, constraints that existed (time, resources, dependencies), and the reasoning behind the decision. Someone who outsourced the work or wasn't truly accountable would struggle to recall a concrete example with this level of detail."
+    }
+  ],
+  "originality_cluster_0_5": 3.0,
+  "originality_signal": "MODERATE",
+  "originality_role_translation": "Some inventive spark above competent execution. Likely a reliable builder who occasionally finds a better path than the default. Use the ingenuity follow-ups to test whether the originality is repeatable or a one-off, and whether it survives contact with enterprise constraints.",
+  "flags": [
+    {
+      "tier": "genuine",
+      "claim": "Built and shipped internal claims-triage agent with 4-step workflow (intake → extraction → policy-match → human approval), live to 40 adjusters for 7 months",
+      "why": "Directly corroborated across repo README, commit history (~2k commits over 9 months), and detailed write-up. Workflow stages, user count, and duration all match. Repo is inspectable.",
+      "what_to_verify": "N/A — corroboration is strong and specific.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Owned prototype to production to maintenance lifecycle",
+      "why": "Repo commit history and write-up both affirm ownership across phases. Rollback note in repo documents post-launch iteration.",
+      "what_to_verify": "N/A — corroborated.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Designed human-in-the-loop approval gate because auto-decisioning on claims was unacceptable risk",
+      "why": "README explicitly documents this decision and the risk rationale. Write-up covers the reasoning in detail. This directly mirrors JD's emphasis on 'risk, governance, ethics as core design constraints.'",
+      "what_to_verify": "N/A — corroborated and well-reasoned.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Wrote reusable extraction component that next two teams reused",
+      "why": "Resume claims this; write-up mentions contribution back to shared stack. Repo structure suggests modular extraction layer. Direct confirmation of reuse across teams would strengthen, but claim is plausible and repo architecture supports it.",
+      "what_to_verify": "Confirm with references that extraction component was actually adopted by >1 downstream team (or check repo for evidence of external pulls/forks).",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "V1 over-automated; error analysis led to reduced autonomy in v2",
+      "why": "Repo README contains a rollback note documenting this. Write-up explicitly covers error analysis and the decision to pull back autonomy. Demonstrates honest reflection on failure — a JD value.",
+      "what_to_verify": "N/A — corroborated across artifacts.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Evaluation harness with precision/recall on 1,200 labelled claims",
+      "why": "Mentioned in repo README and inspectable in the repo itself. Shows thoughtful testing discipline aligned with JD's 'design evaluations' requirement.",
+      "what_to_verify": "N/A — corroborated.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Owned full lifecycle from prototype to production to maintenance",
+      "why": "Resume, repo commit history, and write-up all consistently describe end-to-end ownership. Rollback note and error-analysis callout in repo demonstrate post-launch stewardship.",
+      "what_to_verify": "Commit authorship in repo can confirm primary ownership; write-up credits only the candidate for the decision reversal.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Wrote reusable extraction component that other teams reused",
+      "why": "Mentioned in resume; write-up references it; repo likely contains the component. Claim is specific and modest (doesn't over-claim impact).",
+      "what_to_verify": "Inspect repo for extraction module; check git blame / commit patterns to confirm candidate wrote it and that subsequent commits by other authors use it.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Reduced autonomy in v2 after error analysis revealed over-automation in v1",
+      "why": "Corroborated across all three sources: resume says 'pulled the autonomy back,' repo has rollback note, write-up covers error analysis. Shows humility and iterative thinking.",
+      "what_to_verify": "Compare v1 vs v2 autonomy settings in repo; error analysis document or metrics in repo.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Designed and deployed evaluation harness (precision/recall on 1,200 labelled claims)",
+      "why": "Repo README explicitly mentions eval harness with those metrics. Demonstrates design-evaluation thinking the JD emphasizes.",
+      "what_to_verify": "Inspect eval harness code in repo; confirm 1,200 claim dataset exists and is properly labelled.",
+      "affects_score": false
+    }
+  ],
+  "corroboration_pct": 92.0,
+  "integrity_hold": false,
+  "redaction_log": [],
+  "disclaimer": "Advisory only. Generated to support a human interviewer's judgment. This system does not make hiring decisions and must not be used to auto-screen, auto-reject, or rank candidates without human review."
+}

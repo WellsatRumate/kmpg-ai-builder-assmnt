@@ -1,0 +1,10 @@
+{
+  "candidate_id": "CAND-E",
+  "display_name": "Candidate E (genuine inventor)",
+  "role_level": "Senior Consultant",
+  "resume_text": "Inherited a mess: ~5k/day support tickets, no labels, no budget to run a strong model on every ticket, and the off-the-shelf classifier was wrong often enough that nobody trusted it. Instead of buying labels, I ran two cheap small models and treated their DISAGREEMENT as the signal: agree -> accept the answer, disagree -> escalate that one ticket to the expensive model. Then I made the escalation threshold self-calibrate off the rolling disagreement rate, so it needed zero labelled data to stay tuned as ticket mix drifted. Cut model spend ~80% while matching the strong model's accuracy on a later audit. Pulled the routing core out into a ~200-line library; two other teams dropped it into their own pipelines. Honest about the failure mode: when both weak models are wrong the same way, disagreement is silent and it slips through. I'm a better builder than I am a self-promoter.",
+  "provided_links": [
+    {"label": "confidence-cascade repo", "url": "https://github.com/synthetic-e/confidence-cascade", "kind": "repo"},
+    {"label": "Write-up: disagreement is cheaper than labels", "url": "https://synthetic-e.dev/disagreement-is-cheaper", "kind": "writing"}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "candidate_id": "CAND-F",
+  "display_name": "Candidate F (fluent, AI-generated, hollow)",
+  "role_level": "Senior Consultant",
+  "resume_text": "I am an AI Builder experienced in designing and deploying agentic workflows that drive measurable business value. In my most recent project, I built a multi-agent customer-support automation using a supervisor agent that orchestrates specialized sub-agents for retrieval, summarization, and response generation. I implemented retrieval-augmented generation with a vector database for grounding, added guardrails for responsible AI, and used evaluation metrics such as faithfulness and answer relevance to validate output quality. I follow best practices for prompt engineering, observability, and human-in-the-loop oversight. I am passionate about leveraging cutting-edge large language models to deliver enterprise impact and continuously iterate based on data.",
+  "provided_links": [
+    {"label": "Project repo", "url": "https://github.com/synthetic-f/multi-agent-support", "kind": "repo"},
+    {"label": "Blog: building agentic workflows", "url": "https://synthetic-f.io/building-agentic-workflows", "kind": "writing"}
+  ]
+}

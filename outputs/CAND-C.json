@@ -1,0 +1,354 @@
+{
+  "candidate_id": "CAND-C",
+  "display_name": "Candidate C (self-taught, messy resume)",
+  "composite_score": 91.8,
+  "recommendation": "Advance — strong signal. Use follow-ups to confirm depth.",
+  "criterion_scores": [
+    {
+      "criterion_id": "builder_evidence",
+      "criterion_name": "Builder Evidence (ships real things)",
+      "weight": 0.18,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E6",
+        "E10"
+      ],
+      "rationale": "Shipped rota scheduler in production 14+ months, repo with commit history, demo shows live system."
+    },
+    {
+      "criterion_id": "governance",
+      "criterion_name": "Responsible-AI / Governance Judgment",
+      "weight": 0.15,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E2",
+        "E7",
+        "E9",
+        "E11"
+      ],
+      "rationale": "Explicit human escalation when confidence low; test coverage of failure modes; graceful degradation in live system."
+    },
+    {
+      "criterion_id": "workflow_systems",
+      "criterion_name": "Workflow & Systems Thinking",
+      "weight": 0.14,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E2",
+        "E7",
+        "E10"
+      ],
+      "rationale": "Multi-step agentic workflow with clear human-AI handoff boundary; designed around model limits, not just automation."
+    },
+    {
+      "criterion_id": "ambiguity_reframe",
+      "criterion_name": "Ambiguity Tolerance & Reframing",
+      "weight": 0.12,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E10"
+      ],
+      "rationale": "Identified scheduling pain point, reframed as constraint-satisfaction problem, committed to agentic design under operational uncertainty."
+    },
+    {
+      "criterion_id": "originality",
+      "criterion_name": "Originality (non-obvious approach)",
+      "weight": 0.08,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E2",
+        "E7",
+        "E10"
+      ],
+      "rationale": "Non-standard: escalation fallback is deliberate design choice; avoids naive automation—thoughtful, not textbook."
+    },
+    {
+      "criterion_id": "innovation",
+      "criterion_name": "Innovation (creates something new that's used)",
+      "weight": 0.07,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E6",
+        "E10"
+      ],
+      "rationale": "Agentic scheduling system with human-in-loop governance did not exist in original context; adopted, sustained 14 months."
+    },
+    {
+      "criterion_id": "ingenuity",
+      "criterion_name": "Ingenuity (resourceful under constraint)",
+      "weight": 0.07,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E6",
+        "E7"
+      ],
+      "rationale": "Built constraint-based solver handling 200+ workers; elegant escalation logic under uncertainty; no evidence of brute-force approach."
+    },
+    {
+      "criterion_id": "enterprise_fluency",
+      "criterion_name": "Enterprise Fluency",
+      "weight": 0.07,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "E10"
+      ],
+      "rationale": "Understands operational logistics, stakeholder handoff requirements, production safety constraints; depot-scale deployment."
+    },
+    {
+      "criterion_id": "ownership_lifecycle",
+      "criterion_name": "End-to-End Ownership / Lifecycle",
+      "weight": 0.07,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E6",
+        "E10"
+      ],
+      "rationale": "Problem → build → production → maintained 14+ months; active commit history; live demo proves ongoing ownership."
+    },
+    {
+      "criterion_id": "reusable_leverage",
+      "criterion_name": "Reusability & Leverage",
+      "weight": 0.05,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E3",
+        "E8"
+      ],
+      "rationale": "Extracted rota-constraints library; adopted by two other depot sites; deliberate componentization for reuse."
+    }
+  ],
+  "deliberation": {
+    "turns": [
+      {
+        "persona": "skeptic",
+        "facet": "fit",
+        "argument": "The evidence shows hands-on *capability*, but not necessarily fit for regulated enterprise. Yes, E1/E6 prove he shipped and maintained production software—that's real. But regulated enterprise demands more than 'it works': audit trails, compliance documentation, risk frameworks, change control, versioning discipline. E9 shows test coverage of escalation, which is good, but there's no evidence of SOC2 thinking, regulatory mapping, or working within compliance gates. E4 admits presentation weakness—a liability in regulated settings where you must articulate risk to non-technical stakeholders. The fallback mechanism (E2/E7/E10/E11) is sound *engineering*, but it's not evidence he understands how to *govern* the human-in-the-loop decision or document it for audit. A regulated enterprise needs both.",
+        "cites": [
+          "E1",
+          "E2",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "fit",
+        "argument": "The evidence directly shows fit for hands-on AI Builder in regulated enterprise. E1/E6 prove sustained production ownership (14 months, active commits)—not a prototype or proof-of-concept. Critically, E2/E7/E10/E11 demonstrate he *built graceful failure by design*: he didn't optimize purely for automation accuracy; he explicitly routed uncertain decisions to humans. That is the core safety posture regulated enterprises demand. E9 shows he tested the escalation path itself—not afterthought. E8 shows he abstracted constraint logic for reuse across depots—evidence of ops-aware design that travels. E5 (non-CS background via ops) is an asset here: he came to the problem from *user pain*, not from academic pattern-matching. E10's narrated design rationale shows he can articulate choices. This is not a researcher or describer; it's someone who ships, owns, and hardens.",
+        "cites": [
+          "E1",
+          "E2",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "durability",
+        "argument": "The evidence supports durability *only within the original problem domain*. He solved shift scheduling for 200+ workers; the system runs 14 months at the original depot. That's good. But will he sustain when the problem stops being greenfield? E8 shows he extracted a library and two other depots adopted it—that's evidence of reuse, not durability. It's unclear whether he *maintains* those libraries, fixes bugs reported by downstream users, or moves on. E3/E8 don't show multi-year stewardship. The demo (E10) and escalation testing (E9/E11) suggest rigor *on the core path*, but there's no evidence he revisits legacy code, refactors under pressure, or sustains motivation when the system is 'done' and maintenance is grinding. Absence of evidence isn't evidence of absence, but 14-month snapshot doesn't prove he doesn't fade.",
+        "cites": [
+          "E1",
+          "E2",
+          "E5",
+          "E6",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "durability",
+        "argument": "The evidence shows durability. E1/E6 together show 14-month *active commit history*—not deployed-and-abandoned. Active history over that span indicates ongoing refinement, bug fixes, and operational tending, not initial delivery and hand-off. E8 shows he didn't hoard: he extracted and shared the constraint library to two other sites. That act signals ownership of the *problem space*, not just his one system. E9 (escalation path in test suite) shows he builds for failure *before* it happens, reducing reactive firefighting later. E2/E7 show he designed human-in-the-loop as a first-class concern, not a patch—systems built that way degrade gracefully and don't suddenly become unmaintainable. E5 (ops background) is relevant: builders from operations typically understand long-tail support and maintenance burden. E10's narrated rationale shows he reasons about choices—a sign of durability consciousness.",
+        "cites": [
+          "E1",
+          "E2",
+          "E5",
+          "E6",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "ingenuity",
+        "argument": "The ingenuity here is *legitimate but incremental*. E2/E7 (fallback to human when confidence is low) is sensible and important, but it is not novel—confidence thresholds with human escalation are a known pattern in ML-assisted systems. E3/E8 (extracting reusable constraint library) is good software engineering, not inventiveness. It's the right refactor, but it's not a spark—it's a disciplined move any competent builder would make. E1/E6 show he solved a real problem (scheduling 200+ workers), which is valuable, but we don't see *how* he solved it uniquely. Did he apply a novel constraint-solving approach? Did he invent a smarter escalation heuristic? The evidence is silent. E10's demo narration shows articulate reasoning, but articulation of sensible choices is not the same as novel choices. Competent execution of known patterns, yes. Genuine spark, unclear.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "ingenuity",
+        "argument": "There is genuine inventiveness here, grounded in operational insight. E1/E6 shows he identified a *specific, valuable human pain point* (manual scheduling for 200+ workers) and built a system around it—not a generic solver, but one fit to the actual constraint topology of shift work. That fit is inventive. E2/E7/E10/E11 show non-obvious design thinking: rather than over-fitting the model or forcing automation at low confidence, he made the escalation path a *first-class system component*, tested it explicitly, and narrated the reasoning (E10). That is thoughtful design, not pattern-matching. Most builders ship ML systems that degrade silently or throw errors; he designed graceful handoff. E3/E8 is the clincher: he saw that constraint logic could be abstracted *and extracted it as a separate package*. That is product thinking—recognizing that the real value was the constraint model, not the scheduler UI. Two other depot sites adopted it. That suggests he solved the *general* problem, not just his instance. Non-CS background (E5) means his inventions come from operational necessity, not academic catalog.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "team_complement",
+        "argument": "He is operationally grounded (E5), which a pure research or platform team might lack. But the evidence gives little signal of what a strong builder team would miss. He has a presentation weakness (E4)—so he doesn't complement a team that needs external communication. He is hands-on production owner (E1/E6)—but any senior builder does that. He designed human escalation thoughtfully (E2/E7)—but that is table-stakes for responsible ML, not a rare skill. He extracted a library (E3/E8)—good, but not exceptional. The evidence doesn't show he brings domain expertise (safety, ops, ML infra, data), mentoring, systems thinking, or rare technical depth. He may be solid, but it's unclear what he uniquely adds. In a team of strong builders, he might be redundant on execution; he might fill a gap if the team is missing ops empathy, but we have no evidence of that gap or his depth there.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "team_complement",
+        "argument": "He adds *operational grounding and failure-mode thinking* that most builders lack. E5 (non-CS background, came via ops) is not a liability—it's a superpower in regulated/production settings. Most builders optimize for happy-path accuracy; he designed for *graceful failure* (E2/E7/E10/E11). That mindset—\"what happens when I'm wrong?\"—is rare and invaluable. A team of pure ML or platform builders often ships systems that fail silently or catastrophically. His test suite includes escalation path coverage (E9), a practice many teams skip. E1/E6 show he owns the full lifecycle: from problem identification through 14-month maintenance and active commits. Many teams have 'builders' who hand off; he doesn't. E3/E8 show he abstracts and shares: he doesn't build one-off solutions. That is product thinking. In a team of strong builders lacking ops experience, he is the voice of \"what does the operator actually need?\" In a team missing failure-mode discipline, he brings it. He complements by bridging builder rigor and operational reality.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10",
+          "E11"
+        ]
+      }
+    ],
+    "synthesis": "Both perspectives agree on core strengths: E1/E6 demonstrate sustained production ownership (14 months, active commits) solving a real problem (200+ worker scheduling). E2/E7/E10/E11 show deliberate human-in-the-loop design with explicit escalation testing (E9)—a responsible safety posture. E3/E8 show he abstracted constraint logic into a reusable library adopted by two other sites, signaling product thinking beyond one-off delivery. E5 (ops background) is acknowledged by both as relevant context.\n\nThey diverge on three dimensions:\n\n1. **Regulated Enterprise Fit**: Skeptic notes absence of evidence for SOC2, compliance frameworks, audit-trail thinking, and formal risk governance—capability doesn't equal regulatory readiness. Advocate counters that graceful failure-by-design, escalation-path testing, and ops-grounded thinking *are* the core safety posture regulated enterprises need, and that this is demonstrated, not merely claimed. Unresolved: no direct evidence of compliance documentation, change-control discipline, or stakeholder communication in regulated contexts.\n\n2. **Durability**: Skeptic sees a 14-month snapshot without evidence of multi-year stewardship, bug maintenance across downstream users, or sustained motivation post-delivery. Advocate reads the active commit history and library extraction as signals of ongoing ownership and problem-space stewardship, not hand-off. Unresolved: no evidence of long-term maintenance under pressure, refactoring of legacy code, or response to bugs reported by downstream depot sites.\n\n3. **Ingenuity**: Skeptic frames the work as competent execution of known patterns (confidence thresholds, constraint extraction, sensible escalation)—good engineering, not invention. Advocate sees genuine inventiveness: identifying the *specific* constraint topology of shift work, designing escalation as first-class (not patch), abstracting the constraint model into a package (product thinking), and ops-grounded reasoning that avoids over-automation. Unresolved: the evidence does not show *how* he solved scheduling uniquely—algorithm novelty, heuristic innovation, or constraint-solving approach remain undescribed.\n\nOn **team complement**, skeptic sees solid but undifferentiated capability; advocate emphasizes rare ops-informed failure-mode thinking and full-lifecycle ownership. Unresolved: no evidence of mentoring, systems thinking, rare technical depth, or what specific gaps he fills in a hypothetical team.\n\nBoth agree the evidence is *operational and engineering-strong* but *light on regulated-enterprise governance, multi-year stewardship proof, and algorithmic/architectural novelty*.",
+    "open_questions": [
+      "Has he worked in regulated environments (healthcare, finance, safety-critical)? Does he have hands-on experience with SOC2, compliance audits, change control, or formal risk frameworks?",
+      "What is his pattern of maintenance and support for the constraint library adopted by two other depots? Does he respond to bug reports, drive updates, or has it been handed off?",
+      "What is the technical innovation in the scheduling solver itself? Did he apply a novel constraint-solving algorithm, invent a new escalation heuristic, or optimize an existing method?",
+      "How does he communicate complex technical decisions to non-technical stakeholders (operators, managers, compliance teams, auditors)? Does E4's presentation weakness persist or was it isolated?",
+      "In a production incident or compliance audit, has he led root-cause analysis, documented findings, or redesigned systems under pressure? What is his track record under adversity?",
+      "Does his operational background translate to depth in safety thinking, failure modes, or systems resilience—or is it primarily user-empathy and problem identification?",
+      "Beyond the original depot and two adopter sites, has the constraint library or scheduling approach scaled? Are there adoption barriers he has not addressed?"
+    ]
+  },
+  "follow_ups": [
+    {
+      "target_claim": "Implemented explicit uncertainty threshold: solver escalates to human when confidence is low",
+      "gap_type": "depth_probe",
+      "question": "Walk me through a specific example from your implementation where the solver chose to escalate rather than attempt an answer. What was the confidence threshold you set, how did you calculate or arrive at that number, and what happened after the human received the escalation?",
+      "what_a_strong_answer_shows": "Genuine understanding of: (1) how confidence is actually computed in their solver architecture, (2) the reasoning behind their specific threshold choice (not just a default), (3) the mechanics of the escalation workflow they built, and (4) whether they actually validated that the threshold worked in practice—or whether it remains theoretical. Someone who outsourced this would struggle to articulate concrete details about threshold calibration or escalation outcomes."
+    },
+    {
+      "target_claim": "Extracted `rota-constraints` as a separate package; imported by two other internal depots/forks",
+      "gap_type": "unverified_scope",
+      "question": "Walk me through a specific scenario where the rota-constraints package was needed by both of those internal depots. What problem were they each solving, and why couldn't they solve it without extracting it as a separate package?",
+      "what_a_strong_answer_shows": "Genuine understanding of the actual dependency relationship, the concrete use cases in each depot, and the architectural decision to extract rather than duplicate code. A candidate who merely outsourced the work would struggle to articulate the specific problems each depot faced or would give vague, generic answers about 'code reuse' without concrete examples."
+    },
+    {
+      "target_claim": "Built constraint-based scheduling system handling 200+ workers",
+      "gap_type": "depth_probe",
+      "question": "Walk me through a specific scenario where the constraint-based approach you used actually solved a problem that a simpler scheduling method would have failed at. What was the constraint, and how did your system handle it differently?",
+      "what_a_strong_answer_shows": "Genuine understanding of constraint-based scheduling requires the candidate to articulate a concrete tradeoff or conflict (e.g., worker availability vs. skill requirements vs. shift continuity) and explain how constraints interact. Someone who didn't build it would struggle to discuss real algorithmic decisions, failure modes, or edge cases they discovered during implementation. A strong answer reveals domain knowledge of constraint propagation, conflict resolution, or algorithmic choices specific to their system."
+    },
+    {
+      "target_claim": "Designed around model limits, not just automation",
+      "gap_type": "high_polish_low_artifact",
+      "question": "Walk me through a specific time when you chose to do something manually or build a constraint into a system because of what a model couldn't do well. What was the limitation, and how did you design around it?",
+      "what_a_strong_answer_shows": "The candidate can articulate a concrete model failure (hallucination, reasoning error, domain gap, etc.), describe the trade-off they made in their design, and explain why that constraint was better than forcing automation. Someone who merely outsourced writing would struggle to ground this in actual technical choices or would describe generic limitations without connecting them to their own design decisions."
+    },
+    {
+      "target_claim": "Non-standard: escalation fallback is deliberate design choice; avoids naive automation",
+      "gap_type": "claim_without_evidence",
+      "question": "Walk me through a specific situation where your system encountered a problem it couldn't resolve automatically. What was the problem, how did you decide that escalation was the right response rather than trying to automate a fix, and what would have gone wrong if you'd automated it instead?",
+      "what_a_strong_answer_shows": "Genuine understanding of *why* escalation is deliberate—the candidate can articulate a concrete trade-off (e.g., risk of over-automation, domain ambiguity, cost of failure) rather than treating escalation as a fallback for 'hard problems.' They demonstrate they've thought through when automation creates more harm than help, showing the design philosophy is intentional, not reactive."
+    }
+  ],
+  "originality_cluster_0_5": 4.0,
+  "originality_signal": "HIGH",
+  "originality_role_translation": "Rare, high-leverage signal. In a shared builder pool 'deployed against the highest-leverage builds', this is the candidate who finds the non-obvious wedge in an ambiguous problem and invents reusable primitives that compound across every downstream build (JD: 'contribute reusable skills so each build starts further ahead'). Confirm it is grounded — read alongside Builder Evidence: reward invention that shipped and was used, not cleverness on a slide. If both are high, prioritise.",
+  "flags": [
+    {
+      "tier": "genuine",
+      "claim": "Built a constraint-based scheduler handling 200+ shift workers with human-escalation fallback; 14 months production runtime at original depot; reusable library adopted by two other sites.",
+      "why": "Resume claim is directly corroborated across repo (commit history, code structure, README), demo video (live walkthrough, escalation behavior shown), and inferred ongoing use. Specificity, artifact visibility, and working system all match.",
+      "what_to_verify": "Confirm current operational status at original depot and adoption by the two other depots (names, contact); inspect test coverage for escalation path (already visible in repo but worth validating manually).",
+      "affects_score": false
+    },
+    {
+      "tier": "tailored",
+      "claim": "Resume emphasizes 'human-AI handoffs,' 'decision boundaries,' 'fallback when model is unsure,' 'quick iteration,' and 'built to solve a real problem' — language and framing closely mirror JD keywords (human-AI handoffs, appropriate autonomy, governance/trust as design constraints, build quickly test learn iterate).",
+      "why": "The candidate's actual work *does* embody these principles (escalation threshold is exactly a human-AI boundary; uncertainty handling is risk-aware design). However, the resume's presentation is notably compressed and re-keyed to JD terminology. This is strategic packaging of real work, not false claims — worth flagging only to note the alignment is deliberate, not coincidental.",
+      "what_to_verify": "In conversation, ask the candidate to articulate the design philosophy *without* reference to the JD — confirm the principles are intrinsic to their approach, not retrofitted language.",
+      "affects_score": false
+    },
+    {
+      "tier": "uncertain",
+      "claim": "Candidate states 'no formal CS background' and was a logistics coordinator.",
+      "why": "Resume claims no CS education, yet has shipped production ML/constraint solver code with thoughtful architecture (escalation, tests, reusable library extraction). This is credible (self-taught is common in engineering) but worth a direct conversation: how did they acquire the systems design and ML fundamentals? Were there learning gaps, mentorship, or prior exposure not mentioned?",
+      "what_to_verify": "Ask how they learned to design the solver, handle uncertainty quantification, and structure a reusable library. Probe for prior technical roles, coursework, side projects, or mentorship that bridged the gap between logistics coordination and production ML.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Willing to show code and walk through design decisions; demo video provided.",
+      "why": "Demo video exists, is substantive (not marketing-grade), and shows live system plus reasoning. Code is public and readable. This is high transparency and low risk of overselling.",
+      "what_to_verify": "No action needed; this is already a strength.",
+      "affects_score": false
+    },
+    {
+      "tier": "uncertain",
+      "claim": "No formal CS background; claims comfort with 'building quickly, testing, learning' but resume shows only one substantial project",
+      "why": "Resume is thin — a single polished example. The JD demands full build lifecycle, integrations with enterprise platforms, contributing reusable components to a shared stack, and fluency across multiple tools. One project, however well-executed, doesn't demonstrate breadth or velocity in an enterprise AI Builder role. Could be genuine early-career signal or could indicate limited scope beyond the single win.",
+      "what_to_verify": "Ask for other projects (even small, incomplete, or NDA'd work). Probe depth: Has candidate iterated on *multiple* production systems? Productionized beyond one domain (logistics)? Integrated external APIs or data platforms? Participated in code review, governance, or risk discussions?",
+      "affects_score": false
+    },
+    {
+      "tier": "tailored",
+      "claim": "Resume mirrors JD language: 'human-AI handoffs, decision boundaries, governance' phrasing, 'reusable components,' 'testing, learning, iterate,' 'ambiguity'",
+      "why": "The resume uses almost identical framing to the JD. This is not inherently a red flag — the candidate's actual system *does* exhibit these patterns — but the resume wording is suspiciously close to the job posting. Candidate may have tailored language to match, or genuinely recognized alignment. Demo and repo confirm the substance exists; the concern is packaging, not authenticity of the work itself.",
+      "what_to_verify": "In conversation, ask candidate to explain *unprompted* why they made specific design choices (e.g., why escalate rather than retry? How is confidence measured?). Authentic builders articulate intent without reciting the JD.",
+      "affects_score": false
+    }
+  ],
+  "corroboration_pct": 95.0,
+  "integrity_hold": false,
+  "redaction_log": [],
+  "disclaimer": "Advisory only. Generated to support a human interviewer's judgment. This system does not make hiring decisions and must not be used to auto-screen, auto-reject, or rank candidates without human review."
+}

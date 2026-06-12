@@ -1,0 +1,358 @@
+{
+  "candidate_id": "CAND-D",
+  "display_name": "Candidate D (competent but derivative)",
+  "composite_score": 57.2,
+  "recommendation": "Advance with reservations — follow-ups target the gaps before deciding.",
+  "criterion_scores": [
+    {
+      "criterion_id": "builder_evidence",
+      "criterion_name": "Builder Evidence (ships real things)",
+      "weight": 0.18,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E4",
+        "E3",
+        "E8"
+      ],
+      "rationale": "Strong builder signal: candidate shipped a real, inspectable artifact (HR FAQ bot repo [E4]) serving actual users (~300 employees, 200 queries/week, still in use [E1]). The system is end-to-end complete—PDF ingestion through LLM generation with citations—and lives in a production enterprise context [E8]. Ownership is full-stack: design, implementation, rollout, ongoing support [E3]. Code is verifiable in repo with 120 commits showing iterative refinement [E6].\n\nWhat prevents a 5: Candidate executed a standard reference architecture with minimal novel design [E7, E10]. No evidence of problem reframing, constraint navigation, or pushing back on defaults. The fallback pattern [E2, E5, E9] is sound governance but conventionally applied, not creatively extended. Builder mindset is present (ships, supports, iterates) but limited to competent template execution rather than architectural choice-making or stakeholder negotiation.\n\nScore reflects: real shipped product + verifiable code + production users + full ownership - limited novelty or design leadership."
+    },
+    {
+      "criterion_id": "governance",
+      "criterion_name": "Responsible-AI / Governance Judgment",
+      "weight": 0.15,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E2",
+        "E5",
+        "E9"
+      ],
+      "rationale": "Candidate demonstrates some real governance judgment, but it is narrow and applied within a standard template rather than as a design philosophy. STRONG SIGNALS: E2, E5, E9 show intentional implementation of a concrete safety constraint—confidence-threshold fallback routing to human escalation ('ask HR'). This is a real design decision that treats epistemic boundary and risk as a constraint. The pattern is repeated across sources, indicating it was genuinely deliberate, not claimed after-the-fact. WEAK SIGNALS: (1) The constraint is narrow in scope: only one mechanism (fallback), no mention of other governance axes (data governance, consent, auditability, privacy boundaries, what was explicitly NOT built). (2) E7 and E10 reveal the pattern is borrowed from a reference architecture with minimal deviation—i.e., governance was not rethought or adapted to context, just followed. (3) No evidence of articulating *why* this constraint mattered (risk narrative, stakeholder negotiation, trade-offs), only that it was implemented. (4) No evidence of designing around other enterprise governance concerns (data retention, access control, model provenance, output monitoring, failure modes beyond hallucination). VERDICT: Candidate shows competent execution of one known safety pattern in a high-stakes domain, but no signal of treating governance as a *core design principle* that shapes architecture choices, trade-offs, or what to deliberately exclude. This is a 3: some real signal of constraint-aware thinking, but too narrow and template-driven to claim strong judgment."
+    },
+    {
+      "criterion_id": "workflow_systems",
+      "criterion_name": "Workflow & Systems Thinking",
+      "weight": 0.14,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E2",
+        "E5",
+        "E9"
+      ],
+      "rationale": "The candidate demonstrates **some real signal** of workflow and systems thinking, but it is narrow and reactive rather than proactive or holistic.\n\n**What is present (score-supporting):**\n- E2, E5, E9 all show intentional design of a **safety/graceful degradation boundary**: confidence-threshold fallback routing to human judgment ('ask HR') rather than hallucinating. This is a genuine handoff pattern—recognizing epistemic limits and deferring to humans in a high-stakes domain (HR policy). This is not model-centric; it's explicitly process-aware.\n- E1 shows end-to-end ownership including rollout and ongoing support, suggesting operational systems thinking beyond just model tuning.\n\n**What is absent or weak (score-limiting):**\n- E10 explicitly states: \"No evidence of problem reframing, constraint navigation, or novel design choices... did not extend or adapt the pattern.\" The candidate followed a reference template with \"very few deviations\" (E7). This is competent **execution**, not **systems design**.\n- No evidence of multi-step workflows beyond the standard retrieval pipeline (PDF load → chunk → embed → retrieve → generate). No evidence of failure modes beyond the one fallback.\n- No evidence of explicit **decision boundaries** for what the system should/shouldn't do, autonomy levels, or stakeholder negotiation about handoff points.\n- No signal of designing around human-AI collaboration constraints, error recovery pathways, or system monitoring/triage workflows.\n\n**Verdict:** The fallback mechanism (E2, E5, E9) is a genuine, if simple, workflow design artifact. But the overall pattern is \"ship a standard RAG stack with one safety valve.\" The candidate executes disciplined delivery but does not demonstrate the proactive, multi-constraint systems thinking the anchor requires (\"think in workflows, not just models\"). A 3 reflects real but limited signal."
+    },
+    {
+      "criterion_id": "ambiguity_reframe",
+      "criterion_name": "Ambiguity Tolerance & Reframing",
+      "weight": 0.12,
+      "score_0_5": 2.0,
+      "evidence_refs": [
+        "E2",
+        "E5",
+        "E7",
+        "E10"
+      ],
+      "rationale": "The candidate demonstrates competent execution of a standard pattern (RAG + fallback) but shows minimal evidence of ambiguity tolerance or reframing. E2 and E5 show intentional safety design (confidence thresholds, deferring to 'ask HR'), which is good judgment—but this is applying a well-known pattern in a straightforward domain, not reframing a vague problem into a novel direction. E7 is honest about closely following a reference template with few deviations, and E10 explicitly states 'no evidence of problem reframing, constraint navigation, or novel design choices.' The work is reliable and shipped, but the candidate followed a vendor reference architecture (E3) rather than self-directed scoping or redefinition. No evidence of making assumptions explicit under ambiguity, negotiating constraints, or committing to a defensible direction in the face of competing interpretations. This is execution discipline, not ambiguity tolerance."
+    },
+    {
+      "criterion_id": "originality",
+      "criterion_name": "Originality (non-obvious approach)",
+      "weight": 0.08,
+      "score_0_5": 2.0,
+      "evidence_refs": [
+        "E7",
+        "E10"
+      ],
+      "rationale": "The candidate demonstrates competent execution of a standard RAG pattern but shows no evidence of originality or non-obvious problem reframing. E7 explicitly acknowledges 'closely following reference template with very few deviations,' and E10 directly states 'no evidence of problem reframing, constraint navigation, or novel design choices.' The HR FAQ bot is textbook RAG (PDF chunking → embeddings → vector DB → LLM with citations), and while the confidence-threshold fallback (E2, E5, E9) is a reasonable safety pattern, it is also a documented default in enterprise LLM systems—not a divergent or unconventional choice. The candidate's strength lies in reliable delivery and honest transparency about what was and wasn't novel (E7), which is valuable in an enterprise context but does not satisfy the originality anchor. There is no evidence of problem reframing, architectural divergence, or identifying value others missed. Score reflects competence without originality."
+    },
+    {
+      "criterion_id": "innovation",
+      "criterion_name": "Innovation (creates something new that's used)",
+      "weight": 0.07,
+      "score_0_5": 2.0,
+      "evidence_refs": [
+        "E1",
+        "E3",
+        "E4"
+      ],
+      "rationale": "The candidate delivered a working agentic system (RAG pipeline) that is genuinely used (~300 employees, 200 queries/week, still operational). This satisfies the 'created real value' half of the criterion. However, the innovation anchor explicitly requires moving 'beyond experimentation to validate NEW agentic capabilities' and 'connect pain points to practical, value-driven implementations.' The evidence shows the opposite: E7 candidly states the design 'closely followed reference template with very few deviations,' and E10 explicitly notes 'no evidence of problem reframing, constraint navigation, or novel design choices.' E4 and E8 confirm this is a standard RAG stack (PDF chunking → embeddings → vector DB → retrieval → LLM). The fallback pattern (E2, E5, E9) is correctly applied but is itself a documented, conventional enterprise pattern, not a new capability. E3 and E6 demonstrate solid execution discipline and iterative tuning, but tuning parameters and prompts on a reference architecture does not constitute innovation as defined in the rubric. The candidate proved they can ship reliable systems using proven patterns; they did not create something genuinely new or extend the capability envelope. This is competent delivery of known patterns, scoring in the weak-to-minimal range."
+    },
+    {
+      "criterion_id": "ingenuity",
+      "criterion_name": "Ingenuity (resourceful under constraint)",
+      "weight": 0.07,
+      "score_0_5": 2.0,
+      "evidence_refs": [
+        "E2",
+        "E5",
+        "E7",
+        "E10"
+      ],
+      "rationale": "Candidate demonstrates competent execution of a standard RAG pattern within a fixed timeline (6 weeks), with intentional safety design (confidence-threshold fallback to human judgment). This shows discipline and risk awareness (E2, E5, E9). However, the evidence consistently indicates **following a vendor reference architecture with minimal deviation** (E3, E7, E10). The solution is reliable and shipped successfully, but there is no signal of resourcefulness under constraint—no problem reframing, no clever workarounds, no negotiation of constraints, no elegant simplifications when resources were tight. The fallback mechanism, while correctly applied, is a standard pattern, not an innovation. E6 and E8 show iterative tuning through prompt/config tweaks, which is execution discipline rather than ingenuity. E10 explicitly states 'no evidence of problem reframing, constraint navigation, or novel design choices' and 'reasoning described as conventional, following documented defaults.' This is solid delivery work—heavy-handed solutions work fine when you have a reference template and a team, but there is insufficient evidence that this candidate would navigate elegantly when templates don't apply, data is sparse, budget is thin, or legacy systems constrain the path. Score reflects 'works but is standard' rather than 'resourceful and clever under real constraint.'"
+    },
+    {
+      "criterion_id": "enterprise_fluency",
+      "criterion_name": "Enterprise Fluency",
+      "weight": 0.07,
+      "score_0_5": 3.0,
+      "evidence_refs": [
+        "E1",
+        "E2",
+        "E3",
+        "E9"
+      ],
+      "rationale": "Candidate demonstrates SOME real signal of enterprise fluency, but with clear limitations. STRONG SIGNALS: E1 shows understanding of production constraints at scale (200 queries/week, ongoing support, 300-user impact); E2 and E9 demonstrate awareness of governance and risk—intentionally designing fallback mechanisms rather than allowing hallucination in an HR context where accuracy matters; E3 shows operational discipline (6-week timeline, end-to-end ownership, supports stakeholders). These artifacts suggest the candidate understands that enterprises care about reliability, traceability, and graceful degradation. SIGNIFICANT GAPS: E10 explicitly notes 'no evidence of problem reframing, constraint navigation, or novel design choices' and 'no signal of systems thinking, stakeholder negotiation.' The candidate executed a standard pattern competently but did not navigate competing priorities, push back on constraints, or demonstrate understanding of broader organizational dynamics. The work is characterized as 'conventional' and 'templated' (E7), which is appropriate for execution but insufficient for enterprise fluency at Senior Consultant level. Evidence is concrete but narrow—limited to one internal tool with no signal of navigating cross-functional tensions, regulatory complexity, or stakeholder trade-offs beyond the obvious (confidence threshold = safety). Scores 3: candidate understands the basics of production-grade thinking (safety, reliability, compliance) but lacks evidence of deeper organizational sophistication required for the role."
+    },
+    {
+      "criterion_id": "ownership_lifecycle",
+      "criterion_name": "End-to-End Ownership / Lifecycle",
+      "weight": 0.07,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E3",
+        "E4",
+        "E6",
+        "E8"
+      ],
+      "rationale": "Candidate demonstrates clear end-to-end ownership across the full lifecycle. E1 shows the system shipped, is in active use (~200 queries/week), and the candidate stayed with it past launch (\"still in use\"). E3 explicitly states \"owned end-to-end rollout and ongoing support,\" confirming maintenance phase engagement. E4 and E8 document the complete build from problem definition (HR FAQ need) through implementation of a production RAG stack. E6 shows iterative refinement (~120 commits of tuning), indicating active post-ship maintenance and optimization. The 6-week delivery timeline (E3, E8) and the fact that 300 employees depend on it (E1) establish this was a real, non-trivial system, not a prototype. E2, E5, E9 show production-ready governance thinking (fallback mechanisms, safety patterns). The honest self-assessment (E7, E10) that the design followed reference templates rather than being novel is actually a strength signal here—the candidate prioritized shipping and correctness over novelty, which is enterprise-appropriate. However, E10 explicitly notes no evidence of problem reframing, constraint negotiation, or design adaptation, which prevents a 5. This is solid, verifiable end-to-end ownership with maintained post-launch presence, but limited design leadership or stakeholder problem-solving."
+    },
+    {
+      "criterion_id": "reusable_leverage",
+      "criterion_name": "Reusability & Leverage",
+      "weight": 0.05,
+      "score_0_5": 2.0,
+      "evidence_refs": [
+        "E3",
+        "E7"
+      ],
+      "rationale": "The candidate executed a standard RAG pipeline competently and shipped it for internal use, but shows minimal evidence of reusability or leverage thinking. E3 explicitly states the candidate 'followed vendor reference architecture' and favored 'proven patterns over custom builds'—this is execution discipline, not reusability contribution. E7 acknowledges 'closely following reference template with very few deviations,' reinforcing that this was a faithful implementation of an existing pattern, not a novel component designed for reuse. E4-E6 document a working system but contain no evidence of abstraction, componentization, or thinking about how others might reuse pieces. E6 (120 commits of config/prompt tweaks) suggests the work was iterative tuning of a single instance, not extracting generalizable patterns. E10 explicitly notes 'no signal of systems thinking' and that the candidate 'did not extend or adapt the pattern.' The HR FAQ bot appears to be a well-executed one-off deliverable serving ~300 employees, still in use, but there is no evidence it was packaged, documented, or designed as a reusable component for future builds. The fallback mechanism (E2, E5, E9) is a sound safety pattern but represents standard practice in RAG systems, not novel leverage thinking. Score reflects competent delivery of a template without demonstrated abstraction or compounding leverage mindset."
+    }
+  ],
+  "deliberation": {
+    "turns": [
+      {
+        "persona": "skeptic",
+        "facet": "fit",
+        "argument": "This candidate shows execution competence on a narrow, well-trodden path—not hands-on builder fit for regulated enterprise. E7 explicitly states 'closely following reference template with very few deviations,' and E10 confirms 'conventional, following documented defaults.' In regulated environments, builders must navigate compliance constraints, model the system's risk surface, push back on architecture, and own failure modes. E2/E5 show a sensible fallback, but that's table stakes, not differentiation. E6 (~120 commits, mostly config and prompt tweaks) suggests incremental tuning rather than architectural decision-making. No evidence of: requirements translation under compliance pressure (HIPAA/SOX/data residency), evaluation rigor (E7: 'manual spot-checks' only), risk assessment, or tradeoff documentation. E3 mentions 'owned end-to-end rollout'—good—but shipping an HR FAQ on a reference stack in 6 weeks is not the same as owning decisions in a governed environment. This looks like a capable implementer who can execute a standard pattern, not a builder who shapes systems under constraint.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "fit",
+        "argument": "E1–E9 show genuine hands-on builder credentials for regulated enterprise work. This candidate: (1) owned full delivery soup-to-nuts (E3: 'end-to-end rollout and ongoing support'); (2) made intentional safety/risk choices—E2/E5 implement a confidence-threshold fallback explicitly to prevent hallucination, which is a core builder concern in production systems where false answers have compliance or user-trust costs; (3) shipped to real users (E1: ~300 employees), not a prototype; (4) reasoned about failure modes (routing uncertain queries to humans rather than LLM invention). E7's honesty about following a reference architecture is *itself* a builder signal—candidates who oversell their novelty are riskier hires. E10 notes 'conventional' design, but in regulated contexts, conventional + shipped + safe is often better than novel + risky. E6's commit history (config, prompts) reflects the actual work of operationalizing systems: tuning thresholds, managing templates, iteration. This is not a researcher or describer; this is someone who debugged a production system, made tradeoff calls (fallback vs. better retrieval), and lived with the consequences.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "durability",
+        "argument": "This person shows durability concerns for non-greenfield contexts. E1–E3 and E8 reveal a 6-week, end-to-end delivery on a *bounded, well-scoped problem* with a vendor reference architecture as the north star. E7 explicitly states 'very few deviations' from template, and E6 shows ~120 commits dominated by 'config and prompt tweaks'—suggesting shallow iteration depth rather than problem-solving resilience. E10 is the red flag: 'no evidence of problem reframing, constraint navigation, or novel design choices.' Once the greenfield is paved and ambiguity enters—data drift, retrieval failures at scale, conflicting business requirements, or integration debt—this person's playbook appears to be 'follow reference architecture + tune knobs.' E7's honest admission that evals are 'manual spot-checks' with no harness means durability metrics are unknown; we cannot predict failure modes. The fallback (E2, E5, E9) is defensive, not adaptive. Will they redesign when the FAQ bot stops working at 300 users or when HR requests change the schema? The evidence suggests they ship, but fade when the problem stops being 'implement a standard RAG stack in 6 weeks.'",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "durability",
+        "argument": "This person demonstrates *practical durability* for the lifecycle they shipped. E3 shows 'owned end-to-end rollout and *ongoing support*'—not a hand-off; they stayed to maintain it. E2 and E5 are durability moves, not shortcuts: a confidence-threshold fallback prevents cascading hallucination failures, which is exactly how systems degrade in production. E7's honesty ('closely following reference template') is a *durability signal*—no gold-plating or undocumented magic; it ships maintainable code. E6's commit history (config and prompt tweaks) reflects the actual work of keeping a live system operational: not glamorous, but sticky. E9 shows judgment: 'rather than hallucinating' means they understood the failure mode that kills durability—silent errors. For a 300-person internal FAQ, this is a durable solution. E10 notes 'conventional reasoning'—and conventional, when well-executed, *holds up*. They didn't invent; they shipped something that works and stayed to support it. Durability isn't about novelty; it's about not breaking. This person did not break it.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "ingenuity",
+        "argument": "This is competent execution of a well-trodden path, not inventiveness. Every component—RAG, PDF chunking, vector retrieval, confidence thresholds, source citation—is standard practice by 2024. E7 explicitly states 'closely following reference template with very few deviations.' E10 directly acknowledges 'no evidence of problem reframing, constraint navigation, or novel design choices.' The confidence fallback (E2, E5, E9) is a sensible safeguard, but it's the obvious mitigation for hallucination in RAG systems—taught in every LLM course. E6 shows 120 commits that are 'mostly config and prompt tweaks,' suggesting optimization within a fixed architecture rather than inventive problem-solving. The 6-week timeline and vendor reference architecture (E3) reinforce that this was a by-the-book implementation. A genuine spark would involve rethinking the problem (Why RAG for HR FAQs specifically? Could a different approach serve 300 employees better?), navigating real constraints creatively, or discovering an emergent insight. This candidate shipped a working system—that's valuable—but there's no evidence of the 'why did no one think of that?' moment that marks ingenuity.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "ingenuity",
+        "argument": "The candidate showed sound problem-solving judgment within the scope of a real constraint: serving 300 employees with an FAQ system in 6 weeks (E3). Rather than over-engineer or chase novelty, they selected the appropriate tool (RAG stack: E1, E4) and made a deliberate design choice that prevented a known failure mode. The confidence-threshold fallback (E2, E5, E9) is not novel in isolation, but E10 frames it as a conscious decision to avoid hallucination—showing they understood the real user harm and refused to ship a system that would mislead employees. E7 shows intellectual honesty: they acknowledged the reference template origin rather than claiming invention where none occurred. The ~120 commits (E6) on config and prompts suggest they iterated to optimize the system for their actual user base (300 specific employees with specific FAQ content), not just copy-pasted a template. E3 notes they 'owned end-to-end rollout and ongoing support'—the ingenuity here is in execution discipline and ensuring the system stayed useful in production. They solved a real problem with appropriate tools and defensive design; that's not groundbreaking, but it's the ingenuity of knowing when to use existing patterns well rather than invent unnecessarily.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "team_complement",
+        "argument": "This candidate demonstrates competent execution of a standard, well-documented RAG pipeline—but offers little that a team of strong builders wouldn't already possess. The work is derivative: they followed a vendor reference architecture (E7) with very few deviations, shipped a conventional stack (chunking → embeddings → vector DB → retrieval → LLM), and made only incremental choices like confidence thresholding (E2, E5, E9). On a team with builders who've shipped production systems, this person becomes redundant for: core RAG infrastructure (any competent engineer can implement top-k retrieval and citations), straightforward fallback logic (E5 is basic threshold routing), and standard delivery execution (E3). The 120 commits were mostly config and prompt tweaks (E6)—not architectural work. Critically, they show no evidence of problem reframing, constraint navigation, or novel design choices (E10). They'd add: comfort with RAG best practices and willingness to own end-to-end delivery (E3). But a team lacking creative problem-solving, systems thinking, or ability to push past templates would benefit more from this hire than a team already strong in those areas.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E9",
+          "E10"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "team_complement",
+        "argument": "This candidate adds reliable execution discipline and practical RAG system maturity that strong builders often lack. Their value: (1) **Production-ready safety thinking**—they implemented fallback mechanisms explicitly to prevent hallucination (E2, E9), showing they think about failure modes, not just happy paths. (2) **Honest, maintainable code practice**—the README is clear and acknowledges template adherence (E7); this honesty about baselines is rare and valuable. (3) **End-to-end ownership and delivery credibility**—they shipped in 6 weeks, owned rollout and ongoing support for 300 users (E1, E3), and the system stayed up. A team of brilliant architects often struggles with the unglamorous work of keeping internal tools running and supporting real users. (4) **Pragmatic stack consolidation**—they understand when 'follow the reference architecture' is the right call (E7, E10), avoiding over-engineering. On a team full of people trying to innovate, this person provides ballast: they execute the known-good path cleanly, leaving room for others to innovate on harder problems. They're not redundant to a team that values shipping and maintaining systems, only to a team that already has mature operations discipline.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E5",
+          "E6",
+          "E7",
+          "E9",
+          "E10"
+        ]
+      }
+    ],
+    "synthesis": "Both perspectives agree on core facts: the candidate executed a bounded, well-scoped RAG system in 6 weeks using a vendor reference architecture, shipped to 300 real users, owned end-to-end delivery including ongoing support, implemented a confidence-threshold fallback to prevent hallucination, and made ~120 commits dominated by configuration and prompt tuning. They converge that this represents **competent, production-aware execution of a standard pattern**.\n\nThey diverge sharply on what this signals:\n\n**Fit for regulated enterprise building:** Skeptic sees a capable implementer who executes templates but cannot navigate compliance constraints, model risk surfaces, push back on architecture, or own failure modes under pressure. Advocate reads the same honesty about template adherence (E7) and conventional choices (E10) as builder signals—owners who ship safely rather than oversell novelty, and who made intentional tradeoff calls (fallback vs. retrieval improvement) to prevent user harm. The crux: does 'closely following reference template' indicate lack of builder judgment, or sound judgment to avoid over-engineering a bounded problem?\n\n**Durability beyond greenfield:** Skeptic worries the candidate's playbook is 'follow template + tune knobs' and predicts they will fade when ambiguity enters (data drift, conflicting requirements, integration debt, schema changes). The lack of evaluation harness (E7: manual spot-checks only) leaves failure modes opaque. Advocate argues durability isn't novelty; it's not breaking. The candidate stayed through rollout and ongoing support (E3), implemented defensive design (fallback), and shipped conventional systems that hold up. For a 300-person internal tool, this demonstrates *practical durability of execution*, not a signal of limitations at scale.\n\n**Ingenuity and team complement:** Skeptic finds no evidence of problem reframing, constraint navigation, or a 'why did no one think of that?' moment—the confidence fallback is table-stakes mitigation, not invention. They see redundancy risk: a team of strong builders already possesses RAG infrastructure competency. Advocate reframes: the ingenuity is in *knowing when not to invent*—selecting the appropriate tool, iterating to fit the actual user base (300 specific employees), and refusing to ship a system that would mislead. They'd add reliability, production-safety thinking, and execution discipline that strong teams often lack, especially for unglamorous operational work.\n\n**Genuine convergence:** This candidate is not a researcher, systems architect, or innovator. They are a reliable executor of known-good patterns with demonstrated safety awareness and willingness to own end-to-end delivery and maintenance. Both sides agree on these facts; they differ only on whether these traits indicate a boundary (skeptic: limited to templates and bounded scope) or a strength (advocate: ballast and durability for teams that innovate elsewhere).",
+    "open_questions": [
+      "How would this candidate respond to a requirement that deviated from the reference architecture—e.g., a compliance mandate requiring custom retrieval logic, data residency constraints, or a schema change that broke the FAQ structure? Would they redesign, or propose workarounds within the template?",
+      "What happens when the system's failure modes emerge at scale (e.g., retrieval failures for 5,000 users, semantic drift in embeddings, hallucination patterns the confidence threshold doesn't catch)? Do they have a mental model for diagnosing root causes, or do they default to prompt/threshold tuning?",
+      "E7 notes 'manual spot-checks' for evaluation. Does this candidate know how to design automated evaluation harnesses, or is that outside their scope? If deployment scales, is the absence of instrumentation a knowledge gap or a resource choice?",
+      "In E3, they 'owned end-to-end rollout and ongoing support'—for how long? Did they hand off, or maintain the system over months/years? This distinguishes 'owner of delivery' from 'owner of durability.'",
+      "Given a greenfield problem with no reference template (e.g., a novel compliance use case, or a domain RAG hasn't been validated for), what would their approach be? Would they seek a new template, or would they begin with first-principles problem analysis?"
+    ]
+  },
+  "follow_ups": [
+    {
+      "target_claim": "Owned end-to-end rollout and ongoing support",
+      "gap_type": "unverified_scope",
+      "question": "Walk me through a specific moment during the rollout when something didn't go as planned—what broke, how did you find out about it, and what did you actually do to fix it?",
+      "what_a_strong_answer_shows": "Genuine ownership means they can recall concrete details: specific systems/users affected, their own decision-making (not just passing it to someone else), the actual trade-offs they navigated, and measurable outcomes. Vague answers or deflection to 'the team' suggests they may have been a stakeholder rather than the owner."
+    },
+    {
+      "target_claim": "Implemented a confidence-threshold fallback mechanism as a deliberate safety/governance choice",
+      "gap_type": "depth_probe",
+      "question": "Walk me through a specific situation where the model's confidence score fell below your threshold. What did you observe about the model's behavior at that boundary, and how did you decide what the actual threshold value should be rather than a different number?",
+      "what_a_strong_answer_shows": "Genuine implementation experience: the candidate can describe concrete examples of model outputs near the threshold, explain the trade-offs they observed (e.g., false negatives vs. false positives), reference actual data or metrics that informed their threshold selection, and articulate why that specific number balanced safety against utility. Weak answers reveal outsourced work through vagueness, inability to recall edge cases, or generic safety language disconnected from the mechanics of their own system."
+    },
+    {
+      "target_claim": "System serves ~300 employees, 200 queries/week, still in production",
+      "gap_type": "unverified_scope",
+      "question": "Walk me through what happens on a typical week when you hit that 200-query volume—what bottlenecks or resource constraints actually show up, and how do you know when you're approaching the system's limits?",
+      "what_a_strong_answer_shows": "Genuine operational familiarity: specific details about query latency patterns, database load, infrastructure metrics they monitor, concrete examples of recent scaling decisions or incidents, and realistic tradeoffs they've had to make. Someone who didn't build/run it would struggle to name actual constraints or recent operational decisions."
+    },
+    {
+      "target_claim": "Delivered a production-grade RAG system with thoughtful governance and safety-first design",
+      "gap_type": "high_polish_low_artifact",
+      "question": "Walk me through a specific decision you made about what information your RAG system would *not* retrieve or surface, even if it was technically available in your knowledge base. What was the trade-off, and how did you handle it?",
+      "what_a_strong_answer_shows": "Genuine understanding of governance constraints, not just retrieval mechanics. A strong answer reveals: (1) concrete examples of intentional restrictions (PII filtering, access controls, content policies), (2) the reasoning behind those choices (compliance, user safety, organizational policy), (3) awareness of real implementation challenges (false positives, user friction, monitoring), and (4) how safety considerations shaped architecture decisions—not bolted on afterward. Weak answers stay abstract ('we had safety reviews') or confuse retrieval quality with governance."
+    },
+    {
+      "target_claim": "Demonstrates systems thinking and enterprise fluency through workflow design and handoff patterns",
+      "gap_type": "claim_without_evidence",
+      "question": "Tell me about a time when you discovered that a workflow handoff you'd designed was creating a bottleneck or unintended consequence elsewhere in the organization. Walk me through what you observed, how you diagnosed it, and what you changed.",
+      "what_a_strong_answer_shows": "Genuine systems thinking—the ability to see beyond isolated processes, recognize ripple effects across departments, and adjust design based on feedback from the broader enterprise. A strong answer reveals humility about initial blind spots and concrete evidence of actually mapping dependencies, talking to downstream teams, and iterating the design rather than defending the original approach."
+    }
+  ],
+  "originality_cluster_0_5": 2.0,
+  "originality_signal": "LOW",
+  "originality_role_translation": "Competent execution of known patterns; little divergence from the default approach. Not disqualifying — much of the role is reliable delivery — but this is unlikely to be the builder who finds the wedge others miss. Read against Builder Evidence: a strong builder with low originality is a solid journeyman; a weak builder with low originality is a pass.",
+  "flags": [
+    {
+      "tier": "tailored",
+      "claim": "Owned the full build lifecycle: prototype in the AI Lab, productionize through Internal Transformation, and maintain post-deployment.",
+      "why": "Resume uses exact language from JD ('full build lifecycle', 'prototype', 'productionize', 'maintain post-deployment'). Actual artifacts show a straightforward RAG tutorial implementation with no evidence of prototyping phases, productionization workflows, or formal deployment stages. The repo and build notes describe a single linear build, not a lifecycle model.",
+      "what_to_verify": "Did the candidate actually follow KPMG's 'AI Lab' → 'Internal Transformation' → 'post-deployment support' process? Or was this a direct build? Ask for deployment/productionization artifacts (tickets, handoff docs, formal testing plans).",
+      "affects_score": false
+    },
+    {
+      "tier": "tailored",
+      "claim": "Contribute reusable skills, components, and tools back into the shared stack.",
+      "why": "This mirrors JD language exactly. Artifacts show no evidence of component abstraction, tool packaging, or contribution to a shared library. The repo is a single closed application; the build notes mention no reusable extraction or upstream contribution.",
+      "what_to_verify": "Did the candidate publish reusable components, skills, or abstractions? Check internal tooling repos, shared frameworks, or artifact registries for contributions with this candidate's name.",
+      "affects_score": false
+    },
+    {
+      "tier": "derivative",
+      "claim": "Shipped in 6 weeks, still in use, ~200 queries/week, owned it end to end including rollout and support.",
+      "why": "Corroborated by build notes and repo README. However, this is a textbook RAG pipeline with no novel design decisions, constraints navigated, or risk/governance handling visible. The candidate explicitly notes 'I tend to reach for the proven pattern rather than reinvent things' — which is honest but thin for a Senior Consultant role at KPMG that emphasizes 'think in workflows', 'risk, governance, ethics, and trust as core design constraints', and 'handle integrations with enterprise platforms and data sources'. No evidence of multi-stakeholder coordination, compliance design, or enterprise integration beyond a simple internal tool.",
+      "what_to_verify": "For this role's seniority bar: What governance, risk, or ethical constraints did the candidate navigate? Any enterprise integration (SSO, audit logging, data residency)? Any evaluation harness or SLA design? The repo shows only 'manual spot-checks' — does the candidate have experience with formal evaluation frameworks (RAGAS, LLMeval, etc.)?",
+      "affects_score": false
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "Work with production systems, design evaluations, and handle integrations with enterprise platforms and data sources.",
+      "why": "Resume does not detail any production system hardening, evaluation methodology, or enterprise integrations. The HR FAQ bot is an internal tool; no evidence of production monitoring, enterprise data source integration (e.g., LDAP, data warehouses), or formal evaluation design.",
+      "what_to_verify": "Does the candidate have prior experience with production observability, A/B testing, or enterprise integrations (SSO, APIs, databases)? Ask for examples from other projects or roles.",
+      "affects_score": false
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "Think in workflows, not just models — human-AI handoffs, decision boundaries, appropriate autonomy.",
+      "why": "The HR FAQ bot is a retrieval + fallback system with a single decision boundary (confidence threshold → 'ask HR'). No evidence of multi-turn workflows, human-in-the-loop design, approval chains, or complex autonomy reasoning.",
+      "what_to_verify": "Does the candidate have experience with agentic systems, approval workflows, or multi-turn reasoning? Show examples of human-AI handoff design.",
+      "affects_score": false
+    },
+    {
+      "tier": "derivative",
+      "claim": "Standard RAG stack... Followed the vendor reference architecture closely... there is nothing here a competent developer would not have built the same way from the standard tutorial",
+      "why": "The candidate's own build notes explicitly state the work is conventional: every choice is the documented default, reasoning is sound but conventional, no reframing, no constraint navigated, no claim of anything new. This is honest and self-aware, but it is tutorial-grade execution. The repo confirms: ~120 commits are mostly config and prompt tweaks, no eval harness beyond spot-checks, no novel patterns.",
+      "what_to_verify": "For a Senior Consultant role that emphasizes 'designing evaluations,' 'reusable components,' 'appropriate autonomy,' and 'risk/governance/ethics as core design constraints,' clarify: what distinguishes this work from a junior engineer's first RAG project? What would a Senior-level artifact look like in the candidate's hands?",
+      "affects_score": false
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "I tend to reach for the proven pattern rather than reinvent things",
+      "why": "This is a reflexive claim (personality/philosophy) with no artifact demonstrating when the candidate chose *not* to use a proven pattern or when they *did* reinvent because it was warranted. Corroborated by this project alone (which *is* a proven pattern), but that's circular. No counter-example or nuance provided.",
+      "what_to_verify": "Ask for a past project where the candidate pushed back on the 'proven pattern,' built a novel approach, or handled a constraint that forced deviation from the reference architecture. Does the candidate's portfolio include anything that required architectural judgment, not just execution?",
+      "affects_score": false
+    }
+  ],
+  "corroboration_pct": 95.0,
+  "integrity_hold": false,
+  "redaction_log": [],
+  "disclaimer": "Advisory only. Generated to support a human interviewer's judgment. This system does not make hiring decisions and must not be used to auto-screen, auto-reject, or rank candidates without human review."
+}

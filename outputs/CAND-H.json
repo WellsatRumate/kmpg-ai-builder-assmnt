@@ -1,0 +1,325 @@
+{
+  "candidate_id": "CAND-H",
+  "display_name": "Candidate H (resume fabricated for the role)",
+  "composite_score": 5.4,
+  "recommendation": "Integrity hold — do NOT advance on this submission as-is. Near-total mismatch between the stated experience and the candidate's own provided history (LinkedIn/portfolio), in a resume shaped to this JD. Verify directly with the candidate before any further step. Advisory only: confirm, do not auto-reject.",
+  "criterion_scores": [
+    {
+      "criterion_id": "builder_evidence",
+      "criterion_name": "Builder Evidence (ships real things)",
+      "weight": 0.18,
+      "score_0_5": 0.0,
+      "evidence_refs": [
+        "E9",
+        "E10"
+      ],
+      "rationale": "Resume claims shipped systems; LinkedIn shows sales/account management only. No inspectable artifacts or technical project history verifiable."
+    },
+    {
+      "criterion_id": "governance",
+      "criterion_name": "Responsible-AI / Governance Judgment",
+      "weight": 0.15,
+      "score_0_5": 1.0,
+      "evidence_refs": [
+        "E4"
+      ],
+      "rationale": "E4 claims governance embedded; no concrete design decisions, constraints, or trade-offs cited. Value statement only."
+    },
+    {
+      "criterion_id": "workflow_systems",
+      "criterion_name": "Workflow & Systems Thinking",
+      "weight": 0.14,
+      "score_0_5": 0.0,
+      "evidence_refs": [
+        "E9",
+        "E10"
+      ],
+      "rationale": "No evidence of workflow design, handoffs, or human-AI boundaries. Career background is sales, not systems design."
+    },
+    {
+      "criterion_id": "ambiguity_reframe",
+      "criterion_name": "Ambiguity Tolerance & Reframing",
+      "weight": 0.12,
+      "score_0_5": 0.0,
+      "evidence_refs": [
+        "E9",
+        "E10"
+      ],
+      "rationale": "No case studies or problem-scoping examples. Cannot verify ambiguity tolerance or reframing ability."
+    },
+    {
+      "criterion_id": "originality",
+      "criterion_name": "Originality (non-obvious approach)",
+      "weight": 0.08,
+      "score_0_5": 0.0,
+      "evidence_refs": [
+        "E9",
+        "E10"
+      ],
+      "rationale": "No evidence of non-obvious problem redefinition or unconventional architecture. LinkedIn history contradicts technical claims."
+    },
+    {
+      "criterion_id": "innovation",
+      "criterion_name": "Innovation (creates something new that's used)",
+      "weight": 0.07,
+      "score_0_5": 0.0,
+      "evidence_refs": [
+        "E9",
+        "E10"
+      ],
+      "rationale": "Resume asserts innovation; LinkedIn shows no technical product delivery or adoption evidence. Unverifiable."
+    },
+    {
+      "criterion_id": "ingenuity",
+      "criterion_name": "Ingenuity (resourceful under constraint)",
+      "weight": 0.07,
+      "score_0_5": 0.0,
+      "evidence_refs": [
+        "E9",
+        "E10"
+      ],
+      "rationale": "No examples of resourceful problem-solving under constraint. No technical track record in LinkedIn to assess."
+    },
+    {
+      "criterion_id": "enterprise_fluency",
+      "criterion_name": "Enterprise Fluency",
+      "weight": 0.07,
+      "score_0_5": 1.0,
+      "evidence_refs": [
+        "E1",
+        "E2"
+      ],
+      "rationale": "Resume mentions regulated enterprises and stakeholder integration; LinkedIn shows only account/territory management. Limited enterprise technical context."
+    },
+    {
+      "criterion_id": "ownership_lifecycle",
+      "criterion_name": "End-to-End Ownership / Lifecycle",
+      "weight": 0.07,
+      "score_0_5": 0.0,
+      "evidence_refs": [
+        "E3",
+        "E9",
+        "E10"
+      ],
+      "rationale": "E3 claims end-to-end ownership; LinkedIn contradicts with zero engineering roles. Cannot verify productionization or maintenance."
+    },
+    {
+      "criterion_id": "reusable_leverage",
+      "criterion_name": "Reusability & Leverage",
+      "weight": 0.05,
+      "score_0_5": 1.0,
+      "evidence_refs": [
+        "E5"
+      ],
+      "rationale": "E5 claims firm-wide adoption of components; no artifacts, repos, or verifiable reusable assets shown. Unsupported claim."
+    }
+  ],
+  "deliberation": {
+    "turns": [
+      {
+        "persona": "skeptic",
+        "facet": "fit",
+        "argument": "This is a red flag fabrication, not a fit question. E9 shows the candidate's actual LinkedIn profile is a Territory Account Manager in medical device sales with zero software engineering or AI background. E1–E8 are resume claims with no corroboration in the public profile. A hands-on AI Builder in regulated enterprise requires demonstrated technical depth, production incident response, and security/compliance hands-on work. Someone with only sales and retail management experience cannot credibly claim 6 years delivering production agentic systems. This is not a fit question—it's a credential verification failure.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "fit",
+        "argument": "If E1–E8 are accurate, the fit is exceptional: 6 years in regulated enterprise (E1), full lifecycle ownership from Lab to production (E3), embedded governance (E4), production evaluation design (E6), and partnership with engineering on reliability/security/scale (E7). The candidate demonstrates hands-on building, not description—they shipped multi-agent platforms (E2), designed production systems (E6), and built reusable firm-wide tools (E5). However, the advocate position collapses entirely when E9 reveals no technical history exists. E1–E8 cannot be trusted as evidence of actual fit.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E6",
+          "E7",
+          "E8",
+          "E9"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "durability",
+        "argument": "Unknown and unverifiable. E1–E8 suggest sustained delivery across greenfield (prototype) and mature production phases (E3), governance maturation (E4), and scaling partnerships (E7). But E9 reveals the candidate has never held a technical role. There is no evidence this person has weathered ambiguity, debugged production failures, managed technical debt, or adapted through a full system lifecycle. Resume claims of 6 years in regulated AI cannot be tested against actual project history.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E9"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "durability",
+        "argument": "E3, E4, and E5 point to durability: 'full build lifecycle from AI Lab prototype to production' shows bridge across greenfield novelty and mature operations. E4 (governance embedded throughout) and E5 (reusable components adopted firm-wide) suggest this person stays engaged past launch—they're building for sustainability, not just proof-of-concept. E7 (partnering with engineering on scale) shows willingness to solve hard operational problems. If true, these are durability markers. But the advocate cannot defend against E9.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E9"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "ingenuity",
+        "argument": "E5 ('built reusable skills, components, and tools') and E6 ('designed evaluations') sound like thoughtful systemization, but they are generic resume language with no specific inventions, novel architectures, or unusual solutions described. There is no evidence of genuine technical creativity—only competent execution of known patterns (agents, plugins, orchestration on 'approved enterprise stacks' per E8). And again, E9 undermines all technical claims entirely.",
+        "cites": [
+          "E4",
+          "E5",
+          "E6",
+          "E8",
+          "E9"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "ingenuity",
+        "argument": "E5 signals inventiveness: reusable components and tools adopted firm-wide is not commodity work. Someone must have designed these abstractions, identified patterns worth systematizing, and convinced teams to adopt them—that requires some inventive thinking. E6 (designing evaluations for production systems) in regulated enterprise is non-trivial; production eval design for agentic systems is still an emerging craft. E4 (embedding responsible-AI governance throughout) shows integration thinking, not just build-and-ship. But without credible project evidence, ingenuity cannot be distinguished from over-claiming.",
+        "cites": [
+          "E4",
+          "E5",
+          "E6",
+          "E8",
+          "E9"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "team_complement",
+        "argument": "If E1–E8 were real, this candidate would be highly redundant with a team of strong builders: they bring execution, platform design, governance integration, and evaluation—all core builder skills. They would not fill gaps like deep research, novel ML, ecosystem strategy, or non-technical leadership. But the credential fraud (E9 vs. E1–E8) means the real team gap is unknown. A Territory Account Manager in medical devices has no demonstrated complement to any technical builder team.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E9"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "team_complement",
+        "argument": "E4 and E5 suggest a rare complement: deep responsible-AI governance integration and firm-wide adoption of reusable tools. Many builder teams excel at shipping; fewer excel at governance-first design and abstraction-sharing. E7 (embedded partnership with cloud/engineering on reliability, security, scale) shows a builder who bridges AI and operations—not redundant if the team is strong on modeling but weak on ops integration. E3 (full lifecycle ownership) means this candidate unblocks teams from prototype-only depth. But again, E9 negates all team analysis.",
+        "cites": [
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E9"
+        ]
+      }
+    ],
+    "synthesis": "Both skeptic and advocate converge on a single, disqualifying fact: E9 (LinkedIn profile showing Territory Account Manager in medical device sales with zero software engineering or AI background) directly contradicts E1–E8 (six years of regulated enterprise AI delivery, production agentic systems, governance design, and lifecycle ownership). The advocate's case for exceptional fit—full-cycle ownership, governance integration, reusable firm-wide tools, and operations partnership—is internally coherent and would indicate strong technical durability and ingenuity if true. However, the advocate explicitly concedes that E1–E8 'cannot be trusted as evidence of actual fit' once E9 is revealed. The skeptic argues this is not a fit assessment but a credential verification failure: the resume claims are uncorroborated by any public technical history, and the candidate's actual background (sales and retail management) has no demonstrated connection to software engineering, production incident response, security/compliance work, or agentic systems. Both sides agree that without credible corroboration of E1–E8, the candidate's team complement and technical ingenuity cannot be evaluated—a Territory Account Manager background does not fill known technical team gaps. The divergence is procedural: the skeptic treats this as disqualification; the advocate conditional—'if E1–E8 are accurate'—but both conclude the conditional is broken.",
+    "open_questions": [
+      "Are E1–E8 (regulated enterprise AI, production agentic systems, governance design, lifecycle ownership) verifiable through work samples, references, or technical interviews independent of the resume?",
+      "Does the candidate have a technical portfolio, GitHub history, published work, or project artifacts that corroborate hands-on AI/software engineering experience?",
+      "How does the candidate account for the gap between the LinkedIn profile (Territory Account Manager, medical device sales) and resume claims of six years in regulated AI engineering?",
+      "Has the candidate actually debugged production failures, managed technical debt, or adapted through a full system lifecycle in any role—or are E1–E8 extrapolations from secondary involvement (e.g., sales support for AI products)?",
+      "If E1–E8 cannot be independently verified, should the assessment proceed on the assumption that they are accurate, or should unresolved credential claims disqualify further evaluation?"
+    ]
+  },
+  "follow_ups": [
+    {
+      "target_claim": "Led multi-agent platforms powering firm service lines + Owned full build lifecycle from AI Lab prototype to production",
+      "gap_type": "claim_without_evidence",
+      "question": "Walk me through a specific decision you made during the transition from the AI Lab prototype to production that turned out differently than you expected. What changed, and how did you handle it?",
+      "what_a_strong_answer_shows": "Genuine ownership of the full lifecycle—someone who merely outsourced or inherited work would struggle to recall concrete technical or operational friction points. A strong answer reveals real hands-on problem-solving across phases (architecture choices, scaling issues, team coordination, data pipeline changes, etc.) and demonstrates they actually stewarded the project, not just titled it."
+    },
+    {
+      "target_claim": "Built reusable skills, components, and tools adopted firm-wide",
+      "gap_type": "high_polish_low_artifact",
+      "question": "Walk me through a specific tool or component you built that got adopted across the firm. What did you have to change or rebuild after other teams started using it, and what did that reveal about what you'd missed in the first version?",
+      "what_a_strong_answer_shows": "Genuine ownership of a reusable artifact—not just claiming adoption, but demonstrating hands-on knowledge of real friction points, iteration cycles, and the gap between building for oneself versus building for others. Candidates who outsourced the work typically cannot articulate specific feedback loops, unexpected use cases, or their own problem-solving in hardening the tool."
+    },
+    {
+      "target_claim": "Embedded responsible-AI governance throughout [production systems]",
+      "gap_type": "depth_probe",
+      "question": "Walk me through a specific moment when responsible-AI governance actually changed a decision in one of your production systems—what was the original plan, what governance mechanism caught something, and what did you do differently as a result?",
+      "what_a_strong_answer_shows": "Whether the candidate can describe a concrete, lived example with specific stakeholders, technical details, and trade-offs they navigated—rather than abstract processes. A genuine answer reveals whether governance was truly embedded (catching real issues in real time) versus bolted on after the fact, and whether they personally grappled with the friction between shipping and responsibility."
+    },
+    {
+      "target_claim": "6 years delivering production agentic systems across regulated enterprises",
+      "gap_type": "unverified_scope",
+      "question": "Walk me through a specific instance where you had to balance the autonomy of an agentic system with compliance requirements in a regulated environment. What constraints did you have to build in, and how did you decide where to draw the line?",
+      "what_a_strong_answer_shows": "Genuine hands-on experience with the friction between agent autonomy and regulatory oversight. A strong answer demonstrates knowledge of actual compliance frameworks (e.g., audit trails, human-in-the-loop checkpoints, approval workflows), specific trade-offs made, and reasoning about why certain controls were necessary—not generic platitudes about 'safety' or 'compliance.'"
+    },
+    {
+      "target_claim": "Deep experience with agents, plugins, skills, and orchestration on approved enterprise stacks",
+      "gap_type": "high_polish_low_artifact",
+      "question": "Walk me through a specific instance where you had to choose between building a plugin versus a skill versus orchestrating existing components. What trade-offs did you evaluate, and what made you settle on that approach?",
+      "what_a_strong_answer_shows": "Genuine understanding of the architectural differences between these patterns, the constraints of the enterprise stack they actually used, concrete reasoning about when each pattern is appropriate (e.g., plugin for third-party extensibility, skill for isolated reusable logic, orchestration for workflow control), and awareness of real trade-offs like latency, coupling, maintainability, or deployment complexity. A strong answer includes specifics about failure modes they encountered or prevented."
+    }
+  ],
+  "originality_cluster_0_5": 0.0,
+  "originality_signal": "LOW",
+  "originality_role_translation": "Competent execution of known patterns; little divergence from the default approach. Not disqualifying — much of the role is reliable delivery — but this is unlikely to be the builder who finds the wedge others miss. Read against Builder Evidence: a strong builder with low originality is a solid journeyman; a weak builder with low originality is a pass.",
+  "flags": [
+    {
+      "tier": "fabricated",
+      "claim": "Senior AI Builder with 6 years delivering production agentic systems across regulated enterprises",
+      "why": "Near-total mismatch across all provided sources. LinkedIn shows Territory Account Manager in medical device sales (2018–present) with no software engineering, AI, or technical project history. Personal site contains only travel blog and photography—zero technical work. Resume claims six years of agentic systems, multi-agent platforms, AI Lab prototyping, and governance work; none of this appears in any candidate-provided artifact. The resume is also precisely shaped to the JD (agents, plugins, skills, orchestration, full build lifecycle, responsible-AI governance, production systems, enterprise stacks)—exact keyword matches and structural alignment with the job posting.",
+      "what_to_verify": "Request candidate to explain the complete disconnect between LinkedIn career (sales/account management only) and resume (six years AI/agentic systems). Ask for: (1) GitHub or portfolio links with code or project artifacts; (2) dates and titles of claimed AI Builder roles; (3) names of regulated enterprises or internal projects; (4) explanation for why LinkedIn shows no technical experience. Verify employment history directly with employers. If LinkedIn is stale/outdated, ask for updated proof of technical roles and projects.",
+      "affects_score": true
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "Led multi-agent platforms powering firm service lines",
+      "why": "No corroboration: no portfolio, no GitHub, no LinkedIn role history, no code samples, no project links provided.",
+      "what_to_verify": "Provide evidence of multi-agent platform leadership: architecture diagrams, demos, GitHub repos, or references from colleagues who worked on the platform.",
+      "affects_score": false
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "Owned the full build lifecycle from AI Lab prototype to production",
+      "why": "No artifacts provided that show end-to-end ownership—no case studies, no deployed systems, no documentation.",
+      "what_to_verify": "Provide a specific project: from prototype concept through production deployment. Include evidence of design decisions, testing, evaluation results, and post-deployment monitoring.",
+      "affects_score": false
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "Built reusable skills, components, and tools adopted firm-wide",
+      "why": "No code, no repositories, no documentation of reusable components; no evidence they were firm-wide adopted.",
+      "what_to_verify": "Provide GitHub links, code samples, or internal documentation showing reusable component definitions and adoption metrics across the organization.",
+      "affects_score": false
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "Designed evaluations for production systems",
+      "why": "No evaluation frameworks, benchmarks, test plans, or results provided.",
+      "what_to_verify": "Share evaluation methodology, metrics (e.g., accuracy, latency, safety thresholds), and results from at least one production deployment.",
+      "affects_score": false
+    },
+    {
+      "tier": "unsubstantiated",
+      "claim": "Deep experience with agents, plugins, skills, and orchestration on approved enterprise stacks",
+      "why": "No technical proof: no code, no documentation, no named platforms or frameworks.",
+      "what_to_verify": "Name specific enterprise stacks and orchestration platforms used; provide code samples or architecture diagrams showing agent/plugin/skill implementations.",
+      "affects_score": false
+    },
+    {
+      "tier": "authorship_unclear",
+      "claim": "Built reusable skills, components, and tools adopted firm-wide; designed evaluations for production systems; partnered on reliability, security, and scale",
+      "why": "No portfolio, repositories, design documents, or case studies provided. Even if the candidate has done this work, there is no way to verify it is their own, not copied, not borrowed from open-source, or not misattributed.",
+      "what_to_verify": "Request GitHub profile, public repos, or anonymized case studies with specific technical decisions, failure modes, and lessons learned. Ask for architecture diagrams or evaluation datasets they designed. Request names of 'cloud and engineering teams' partnered with and a reference from that collaboration.",
+      "affects_score": false
+    }
+  ],
+  "corroboration_pct": 0.0,
+  "integrity_hold": true,
+  "redaction_log": [
+    "Backstop neutralised a probable 'age' signal (value not stored)."
+  ],
+  "disclaimer": "Advisory only. Generated to support a human interviewer's judgment. This system does not make hiring decisions and must not be used to auto-screen, auto-reject, or rank candidates without human review."
+}

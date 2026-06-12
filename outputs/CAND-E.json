@@ -1,0 +1,341 @@
+{
+  "candidate_id": "CAND-E",
+  "display_name": "Candidate E (genuine inventor)",
+  "composite_score": 90.4,
+  "recommendation": "Advance — strong signal. Use follow-ups to confirm depth.",
+  "criterion_scores": [
+    {
+      "criterion_id": "builder_evidence",
+      "criterion_name": "Builder Evidence (ships real things)",
+      "weight": 0.18,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E4",
+        "E5",
+        "E8"
+      ],
+      "rationale": "Shipped production routing system, ~200-line reusable library, 80% cost reduction on real tickets, external adoption with PRs."
+    },
+    {
+      "criterion_id": "governance",
+      "criterion_name": "Responsible-AI / Governance Judgment",
+      "weight": 0.15,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E3",
+        "E7",
+        "E9",
+        "E10"
+      ],
+      "rationale": "Explicitly documented failure modes (correlated errors), designed audit controls, transparent about system limits, governance baked into design."
+    },
+    {
+      "criterion_id": "workflow_systems",
+      "criterion_name": "Workflow & Systems Thinking",
+      "weight": 0.14,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E9",
+        "E10"
+      ],
+      "rationale": "Multi-step routing with escalation handoffs, explicit human audit loop, failure-mode handling. Less detail on broader workflow orchestration."
+    },
+    {
+      "criterion_id": "ambiguity_reframe",
+      "criterion_name": "Ambiguity Tolerance & Reframing",
+      "weight": 0.12,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E6",
+        "E9",
+        "E11"
+      ],
+      "rationale": "Reframed calibration problem as signal-design problem under constraint (no labels); committed to disagreement-based routing over confidence scoring."
+    },
+    {
+      "criterion_id": "originality",
+      "criterion_name": "Originality (non-obvious approach)",
+      "weight": 0.08,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E6",
+        "E9"
+      ],
+      "rationale": "Non-obvious choice: disagreement-as-signal vs. standard confidence thresholds. Diverges from textbook routing; principled reasoning visible."
+    },
+    {
+      "criterion_id": "innovation",
+      "criterion_name": "Innovation (creates something new that's used)",
+      "weight": 0.07,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E4",
+        "E8"
+      ],
+      "rationale": "Novel routing primitive (disagreement + self-calibration) did not exist in their context; adopted by two other teams, measurable cost impact."
+    },
+    {
+      "criterion_id": "ingenuity",
+      "criterion_name": "Ingenuity (resourceful under constraint)",
+      "weight": 0.07,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E6",
+        "E11"
+      ],
+      "rationale": "Elegant constraint-driven solution: no labeled data available, so designed self-calibrating threshold on disagreement signal instead of brute-force labeling."
+    },
+    {
+      "criterion_id": "enterprise_fluency",
+      "criterion_name": "Enterprise Fluency",
+      "weight": 0.07,
+      "score_0_5": 4.0,
+      "evidence_refs": [
+        "E1",
+        "E5",
+        "E9",
+        "E10"
+      ],
+      "rationale": "Understands cost-accuracy trade-offs, audit for stakeholder trust, cross-team adoption. Treats governance and reputation as operational."
+    },
+    {
+      "criterion_id": "ownership_lifecycle",
+      "criterion_name": "End-to-End Ownership / Lifecycle",
+      "weight": 0.07,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E1",
+        "E4",
+        "E8"
+      ],
+      "rationale": "Problem definition → shipped production system → extracted reusable library → maintained with external PRs and adoption. Full lifecycle owned."
+    },
+    {
+      "criterion_id": "reusable_leverage",
+      "criterion_name": "Reusability & Leverage",
+      "weight": 0.05,
+      "score_0_5": 5.0,
+      "evidence_refs": [
+        "E2",
+        "E4",
+        "E8"
+      ],
+      "rationale": "Abstracted routing logic into ~200-line component; two teams adopted; 600+ commits, external contributors. Compounding leverage, not bespoke."
+    }
+  ],
+  "deliberation": {
+    "turns": [
+      {
+        "persona": "skeptic",
+        "facet": "fit",
+        "argument": "This candidate shows competent execution of a single ML routing pattern, but the evidence doesn't prove hands-on builder maturity in a regulated enterprise. The system is ~200 lines (E1, E4)—elegant, but small-scale. No evidence of: regulatory compliance work (audit trails, governance integration), production incident response at scale, cross-functional navigation with compliance/legal/risk teams, or hardening for enterprise SLAs. The self-calibrating threshold (E1) and audit notebook (E5) hint at thoughtfulness, but one shipped system with external adoption doesn't establish the track record of regulated-environment judgment calls. A strong regulated-enterprise builder would show evidence of navigating approval gates, designing for auditability from day one, or managing stakeholder risk concerns—not just shipping an elegant solution.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "fit",
+        "argument": "This is textbook hands-on builder work in enterprise constraints. The candidate designed a cost-reduction system (E5: ~80% cost savings shipped on 3,000 support tickets) and explicitly engineered for transparency—building an audit notebook (E5) and documenting failure modes upfront (E3, E7, E10). That's not researcher thinking; it's production-first. The resource constraint (E11: 'no budget for labeling') forced pragmatic invention rather than textbook application. They shipped (E1, E4), extracted reusable patterns (E2), and enabled two other teams to adopt (E2, E8)—that's enterprise DNA: unblock others, reduce friction. The explicit failure-mode documentation (E3, E7, E10) and compensating control (random-sample audit in E10) show regulated-mindset thinking even before joining a regulated firm. They built for users and auditability, not just accuracy.",
+        "cites": [
+          "E1",
+          "E2",
+          "E3",
+          "E4",
+          "E5",
+          "E7",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "durability",
+        "argument": "The evidence is all from one tightly-scoped project (disagreement-based routing). We see E1–E11 all describe variants or documentation of the same system. No evidence of: pivoting when a solution didn't work, sustaining a system through three production incidents, inheriting and hardening someone else's code, or shipping something orthogonal when the first idea plateaued. The write-up (E9–E11) is thorough, but thoughtful documentation doesn't prove resilience when ambiguity deepens—when the cost wins flatten, the audit pressure mounts, or a new constraint (latency, fairness) reshapes the problem. A durable builder shows multiple shipped systems, or evidence of staying engaged when the problem stopped being greenfield (e.g., 'scaled from 3K to 300K requests, discovered X, redesigned Y'). This candidate may be a greenfield specialist.",
+        "cites": [
+          "E2",
+          "E5",
+          "E8",
+          "E10"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "durability",
+        "argument": "Durability shows in the depth, not breadth, of this single project. E8 is the key signal: ~600 commits with real issues and PRs from outside contributors. That's not a weekend project or a one-draft ship—that's iterative hardening, responding to real user friction, and evolving design based on production feedback. E5 (shipped on 3,000 tickets with quantified results) and E2 (two teams adopted it) suggest the system had to scale across contexts and survive scrutiny from peers. E10 shows the candidate didn't declare victory after E1; they identified a residual failure mode (correlated model errors) and added a compensating control (audit sampling). That's post-greenfield thinking: 'What breaks this, and how do I catch it?' The explicit failure documentation (E3, E7, E10) across three separate evidence items suggests this wasn't an afterthought—it's a pattern of anticipating long-tail problems. One deep system with 600 commits and cross-team adoption is stronger durability signal than multiple shallow 'shipped' claims.",
+        "cites": [
+          "E2",
+          "E5",
+          "E8",
+          "E10"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "ingenuity",
+        "argument": "The core idea—use disagreement between two cheap models as a routing signal instead of confidence thresholds—is clever and non-obvious (E6), but is it inventive or a known technique rediscovered? Ensemble disagreement for uncertainty is a published pattern in ML literature (e.g., active learning, mixture-of-experts). The write-up (E9–E11) doesn't cite prior work or explain why this framing is novel relative to existing disagreement-based strategies. The self-calibrating threshold (E1) is engineering-solid, but 'use rolling statistics to auto-tune' is standard adaptive-control playbook. The constraint (E11: no labeling budget) forced pragmatism, not necessarily invention—it's a valid reason to pick an existing pattern over a new one. A genuinely inventive builder would show: unexpected architecture choice that works better, or evidence they discovered why naive approaches fail in ways others hadn't articulated. This is competent problem-solving under resource pressure, not spark.",
+        "cites": [
+          "E1",
+          "E5",
+          "E6",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "ingenuity",
+        "argument": "Ingenuity lives in E6 and E11 together: 'disagreement between two weak models is explicitly better than single model confidence score' (E6) AND the resource constraint forced this non-obvious path (E11). Confidence-scoring is the standard ML playbook; disagreement as a primary signal (not ensemble aggregation, but as a feature itself) is the inventive move. E5 validates it works at scale (80% cost reduction, parity accuracy on 3K tickets)—that's not luck; that's insight. The self-calibrating threshold requiring zero labeled data (E1) is the second-order inventiveness: acknowledging that calibration is a bottleneck and designing it away entirely. E10 reveals a third layer: the candidate identified a blind spot (correlated errors invisible to disagreement) and designed a compensating control (random audit sampling). That's not pattern-matching; that's adversarial thinking—'Where will this fail, and what's the minimal safeguard?' The failure-mode documentation (E3, E7, E10) repeated across contexts shows the candidate doesn't just execute; they stress-test their own ideas and communicate the gaps. That's inventive rigor.",
+        "cites": [
+          "E1",
+          "E5",
+          "E6",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "skeptic",
+        "facet": "team_complement",
+        "argument": "If the team is already strong builders, this candidate may be redundant. They excel at shipping small, elegant systems (E1, E4: ~200 lines) with good documentation (E7, E10) and cross-team adoption (E2, E8). Strong builders already do that. The evidence doesn't show: deep infrastructure/systems thinking (scaling to 1M requests, latency hardening), data expertise (understanding statistical failure modes beyond the obvious correlated-error case), mentorship or architectural leadership across multiple domains, or ability to solve ambiguous problems outside their comfort zone. E9–E11 (the write-up) is clear but not novel in framing. If the team needs another solid, self-sufficient executor who ships clean code, they'd be happy. If they need someone to unblock teams on new problem classes or architect a multi-system strategy, this candidate's evidence suggests they excel in focused, defined domains—not in breadth or leadership.",
+        "cites": [
+          "E2",
+          "E3",
+          "E5",
+          "E8",
+          "E10",
+          "E11"
+        ]
+      },
+      {
+        "persona": "advocate",
+        "facet": "team_complement",
+        "argument": "This candidate fills a critical gap on most strong builder teams: they ship systems that others adopt and iterate on (E2, E8: two teams adopted the library; 600 commits from external contributors). Strong teams often have builders who optimize for their own project; this person optimizes for ecosystem. E2 (extracted routing logic into reusable ~200-line library) shows a pattern: 'how do I make this useful for the next person?' E8 (supporting external contributors, documented adoption) shows active stewardship of shared infrastructure. Teams of strong builders often lack someone who thinks systematically about: failure modes that users will hit (E3, E7, E10—three separate calls-outs of the same blindspot), compensating controls (E10: random audit sampling), and transparency for downstream teams (E5: audit notebook shipped alongside metrics). E11 shows resourcefulness: when labeled data wasn't available, they didn't wait or escalate—they redesigned the approach. Many builder teams have strong individual execution; fewer have someone who builds *for adoption* and manages the cognitive load of explaining what can go wrong. That's complement.",
+        "cites": [
+          "E2",
+          "E3",
+          "E5",
+          "E8",
+          "E10",
+          "E11"
+        ]
+      }
+    ],
+    "synthesis": "Both perspectives agree this candidate is a competent, production-oriented builder who ships systems with explicit attention to auditability, failure modes, and cross-team adoption. They converge on: (1) the core routing idea is sound and validated at scale (80% cost savings, 3K tickets, parity accuracy); (2) the candidate exhibits post-greenfield thinking (E10: identifying correlated-error blindspot and adding compensating control); (3) they prioritize transparency and usability for downstream teams (audit notebook, reusable library extraction, external contributor support). They genuinely diverge on three axes: (A) **Regulated-environment readiness**: Skeptic argues one shipped system without explicit evidence of compliance workflows, approval gates, or cross-functional risk navigation doesn't prove regulated-enterprise judgment. Advocate notes the candidate engineered for auditability and failure-mode documentation preemptively, suggesting regulated mindset before joining a regulated org. Unresolved: whether thoughtful design for transparency transfers to formal governance, audit cycles, and stakeholder approval processes. (B) **Durability and scope**: Skeptic notes all evidence traces to one project (variants, documentation, and adoption of the same routing system); no evidence of pivoting, inheriting/hardening others' code, or staying engaged when greenfield novelty fades. Advocate notes the 600 commits and external contributor feedback suggest iterative hardening and post-greenfield evolution within that system; depth beats breadth. Unresolved: whether one deep system with real production feedback demonstrates durability across *different* problem classes and constraints. (C) **Ingenuity and novelty**: Skeptic frames disagreement-based routing as a known technique (active learning, ensemble literature) and questions whether the constraint forced pragmatism or innovation. Advocate argues the non-obvious insight is treating disagreement as a *primary signal* (not ensemble aggregation) and the zero-labeled-data self-calibration as second-order inventiveness, validated by results. Unresolved: whether this represents genuine innovation or skillful application of existing patterns under resource pressure. (D) **Team fit**: Skeptic questions whether the candidate adds breadth or leadership if the team is already strong builders; they excel in focused domains, not ambiguous multi-system architecture. Advocate argues they fill a gap many strong teams lack: systematic focus on failure-mode documentation, compensating controls, and ecosystem thinking (enabling adoption, supporting external contributors). Unresolved: whether ecosystem/adoption focus complements or duplicates the team's existing strengths.",
+    "open_questions": [
+      "Has this candidate navigated formal compliance workflows, approval gates, or audit-readiness processes in a regulated environment, or does their auditability-first design infer such capability?",
+      "When a system stops being greenfield (scaling constraints, new failure modes, latency pressure), does the candidate show evidence of redesigning core assumptions, or do they excel primarily in elegant initial solutions?",
+      "Is disagreement-based routing (validated at E5–E6) a novel insight or skillful application of published ensemble/active-learning techniques under resource constraints?",
+      "On a team with strong individual builders, does this candidate's ecosystem/adoption focus multiply team throughput, or does it represent parallel work that duplicates existing strengths?",
+      "What evidence exists of the candidate solving problems *outside* ML/routing (systems, data, infrastructure, or ambiguous cross-domain challenges)?"
+    ]
+  },
+  "follow_ups": [
+    {
+      "target_claim": "Two other teams adopted the library into their own ML pipelines",
+      "gap_type": "unverified_scope",
+      "question": "Walk me through how one of those teams actually integrated the library into their pipeline. What specific problems were they trying to solve, and what had they tried before yours?",
+      "what_a_strong_answer_shows": "Genuine familiarity with the adoption process—including concrete technical details about integration points, the team's prior constraints or failures, and specific use cases. Someone who only heard about adoption secondhand would struggle to articulate these specifics or would give vague descriptions. A strong answer also reveals whether the candidate actually worked through integration challenges with them or merely observed from a distance."
+    },
+    {
+      "target_claim": "Self-calibrating threshold requires zero labeled data",
+      "gap_type": "depth_probe",
+      "question": "Walk me through how your self-calibrating threshold actually determines what adjustment to make when it encounters a new data point. Specifically, what signal tells it whether to move the threshold up or down if you have no labels to compare against?",
+      "what_a_strong_answer_shows": "Genuine understanding of the mechanism: the candidate must explain a concrete, unlabeled signal (e.g., distribution shift detection, confidence entropy, input similarity clustering, or another principled unsupervised proxy) that drives threshold movement. A weak answer reveals outsourced knowledge—vague claims about 'self-calibration' without explaining what unlabeled feature actually guides the adjustment, or admission that some implicit labeling or validation set is actually required."
+    },
+    {
+      "target_claim": "Disagreement-based routing is non-obvious and explicitly better than confidence thresholds",
+      "gap_type": "high_polish_low_artifact",
+      "question": "Walk me through a concrete example where two models disagree on a prediction, but both have high confidence. How would disagreement-based routing handle that case differently than a confidence threshold approach, and what would you expect to see in the outcomes?",
+      "what_a_strong_answer_shows": "The candidate understands that confidence and disagreement are orthogonal signals—high confidence from both models doesn't mean they're correct (both can be confidently wrong together). A strong answer reveals they can articulate why routing based on *when models diverge* catches systematic failures that uniform confidence thresholds miss, and can reason through what happens when you send such cases to a different handler (expert, human, ensemble) versus a single model."
+    },
+    {
+      "target_claim": "80% cost reduction at parity accuracy on 3,000 sampled support tickets",
+      "gap_type": "depth_probe",
+      "question": "Walk me through how you determined which 3,000 tickets to sample and why that sampling method was appropriate for validating the 80% cost reduction claim.",
+      "what_a_strong_answer_shows": "Whether the candidate understands sampling bias, representativeness, and the statistical rigor needed to support a cost/accuracy trade-off claim. A strong answer reveals knowledge of stratification decisions (ticket type, complexity, channel), sample size justification, and why the sample composition matters for generalizing findings. Weak answers (random selection without rationale, or vague 'representative sample' language) suggest outsourced work or surface-level familiarity."
+    },
+    {
+      "target_claim": "Audit notebook provides transparency and compensates for correlated-error blind spot",
+      "gap_type": "depth_probe",
+      "question": "Walk me through a concrete example where correlated errors would have gone undetected without the audit notebook. What specific pattern would you be looking for in the notebook entries, and how would that pattern differ from what you'd see if errors were independent?",
+      "what_a_strong_answer_shows": "Genuine understanding of (1) what correlated errors are and how they differ mechanically from independent errors, (2) how the notebook's structure or logging actually makes correlated patterns visible, (3) a realistic failure mode where this matters, and (4) the specific audit trail signals that would catch what traditional QA misses. Weak answers will be vague about the mechanism or confuse correlated errors with systematic bias."
+    }
+  ],
+  "originality_cluster_0_5": 4.32,
+  "originality_signal": "HIGH",
+  "originality_role_translation": "Rare, high-leverage signal. In a shared builder pool 'deployed against the highest-leverage builds', this is the candidate who finds the non-obvious wedge in an ambiguous problem and invents reusable primitives that compound across every downstream build (JD: 'contribute reusable skills so each build starts further ahead'). Confirm it is grounded — read alongside Builder Evidence: reward invention that shipped and was used, not cleverness on a slide. If both are high, prioritise.",
+  "flags": [
+    {
+      "tier": "genuine",
+      "claim": "Inherited ~5k/day support tickets, no labels, no budget; built a two-model disagreement-based router that cut model spend ~80% while matching strong-model accuracy",
+      "why": "Fully corroborated across resume, GitHub repo (audit notebook, commit history, external adoption), and technical write-up. Specific numbers, failure modes, and design rationale are consistent and inspectable. The repo shows real external contributions and the write-up is candid about correlated-error blindness.",
+      "what_to_verify": "Ask candidate to walk through the audit notebook; verify the 3,000-ticket dataset and the ~80% cost reduction claim. Confirm the two downstream teams' adoption.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Extracted routing core into ~200-line library; two other teams adopted it",
+      "why": "The GitHub README explicitly links to two repos that adopted confidence-cascade. Commit history and external PRs confirm active use. This is inspectable and verifiable.",
+      "what_to_verify": "Follow the downstream adoption links in the README; spot-check one integration to confirm real use, not ceremonial.",
+      "affects_score": false
+    },
+    {
+      "tier": "uncertain",
+      "claim": "Honest about the failure mode: when both weak models are wrong the same way, disagreement is silent and it slips through.",
+      "why": "The write-up and README both mention this limitation. However, the resume claims this as a personal virtue ('I'm a better builder than I am a self-promoter'). This is framed as character/maturity, not a technical claim, and the technical claim IS documented. The character claim is unverifiable but the self-awareness is real.",
+      "what_to_verify": "In conversation: ask how the candidate would have caught correlated errors in the support-ticket context. Did they pair this with auditing, or was it a known gap in the deployed system?",
+      "affects_score": false
+    },
+    {
+      "tier": "uncertain",
+      "claim": "Self-calibrating threshold that needs zero labelled data to stay tuned as ticket mix drifted",
+      "why": "Described in resume, GitHub audit notebook, and write-up, but the depth of the 'drifting input distribution' claim is not fully demonstrated. The audit covers 3,000 samples, but the claim about staying tuned *over time* as mix drifts is more about a property of the deployed system than a snapshot audit.",
+      "what_to_verify": "Ask: over what time period did you operate this router? Did you observe actual distribution drift? What metrics tracked recalibration? Is there a monitoring dashboard or time-series log of the self-calibrating threshold?",
+      "affects_score": false
+    },
+    {
+      "tier": "tailored",
+      "claim": "Resume frames the work in heavy alignment with JD language: 'treat risk, governance, ethics, and trust as core design constraints,' 'make reasonable assumptions, build quickly, test, learn, iterate,' 'own the full build lifecycle'",
+      "why": "The resume is genuinely about a real, well-documented project (confidence-cascade). However, the framing of that project leans hard into JD keywords ('lifecycle,' 'constraints not afterthoughts,' 'honest about failure mode') without explicitly claiming those were the stated priorities on the original support-ticket router. The technical work is real; the packaging is engineered for this role.",
+      "what_to_verify": "Ask: what was your mandate on the original support-ticket project? Was 'governance and trust' a stated concern, or is that a retrospective frame? How would you describe the project's goals to a peer at the time?",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Inherited ~5k/day support tickets, no labels, no budget; built two-model disagreement router cutting model spend ~80% while matching strong model accuracy",
+      "why": "Repo, audit notebook, and write-up all corroborate the core claim in detail. The 200-line library, 3,000-ticket audit, ~80% cost reduction, and self-calibrating threshold are all inspectable and match the resume narrative exactly. The constraint (no labels, no budget) and the clever routing design (disagreement as signal) are consistent across all three sources.",
+      "what_to_verify": "None needed — this is a solid artifact chain. Optional: ask whether the two other teams' adoptions are still in production, or ask for a reference from one of those teams.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Pulled the routing core into a ~200-line library; two other teams dropped it into their own pipelines",
+      "why": "The README explicitly states 'Ships with... README links two other repos that adopted it,' and the repo shows ~600 commits with real issues and PRs from outside contributors, indicating real adoption and maintenance.",
+      "what_to_verify": "None needed — this is verifiable in the repo itself.",
+      "affects_score": false
+    },
+    {
+      "tier": "genuine",
+      "claim": "Honest about the failure mode: when both weak models are wrong the same way, disagreement is silent and it slips through",
+      "why": "Both the write-up and the repo README explicitly acknowledge this constraint. The write-up notes 'correlated errors (both weak models wrong the same way) are invisible to the method' and pairs the router with human audit to catch it. Shows intellectual honesty.",
+      "what_to_verify": "None needed — this transparency is a strength.",
+      "affects_score": false
+    }
+  ],
+  "corroboration_pct": 95.0,
+  "integrity_hold": false,
+  "redaction_log": [],
+  "disclaimer": "Advisory only. Generated to support a human interviewer's judgment. This system does not make hiring decisions and must not be used to auto-screen, auto-reject, or rank candidates without human review."
+}
